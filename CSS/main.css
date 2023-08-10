@@ -32,6 +32,8 @@ header{
     align-items: center;
     position: sticky;
     top: 0;
+    box-shadow: 0px 0px 10px #010411;
+    z-index: 2;
 }
 
 .main-logo,.nav-links{
@@ -67,7 +69,7 @@ header{
     padding-right: 5%;
 }
 
-.nav-link{
+.nav-link,.nav-link-active{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 30.5px;
@@ -85,13 +87,22 @@ header{
     transition: 0.2s;
 }
 
-.nav-link a{
-    text-decoration: none;
-    font-size: 20px;
+.nav-link-active{
+    background-color: #04124d;
 }
 
-body{
-    background-color: #2f2f2f;
+.nav-link-active a{
+    color: #2148f2;
+}
+
+.nav-link-active:hover{
+    background-color: #fefbee;
+    transition: 0.2s;
+}
+
+.nav-link a,.nav-link-active a{
+    text-decoration: none;
+    font-size: 20px;
 }
 
 footer{
@@ -126,30 +137,21 @@ footer{
 }
 
 .discord-icon,.youtube-icon,.reddit-icon,.x-icon{
-    fill: #fefbee;
-    opacity: 0.8;
+    fill: color-mix(in srgb, #010411, #fefbee);
 }
 
 .social-media-icon:hover .discord-icon{
     fill: #5865F2;
-    opacity: 1;
 }
 
 .social-media-icon:hover .youtube-icon{
     fill: #ff0000;
-    opacity: 1;
 }
 
 .social-media-icon:hover .reddit-icon{
     fill: #ff5700;
-    opacity: 1;
 }
 
 .social-media-icon:hover .x-icon{
     fill: #ffffff;
-    opacity: 1;
-}
-
-.test{
-    margin-bottom: 1000px;
 }

@@ -11,17 +11,17 @@
 
 @font-face{
     font-family: noto;
-    src: url(../Resources/font/NotoSans-Light.ttf);
+    src: url(../resources/font/NotoSans-Light.ttf);
 }
 
 @font-face{
     font-family: remond;
-    src: url(../Resources/font/Remond-Regular.ttf);
+    src: url(../resources/font/Remond-Regular.ttf);
 }
 
 @font-face{
     font-family: roboto;
-    src: url(../Resources/font/RobotoCondensed-Bold.ttf);
+    src: url(../resources/font/RobotoCondensed-Bold.ttf);
 }
 
 header{

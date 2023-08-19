@@ -3,11 +3,22 @@ html{
     max-width: 100vw;
 }
 
+body{
+    background-color: #04354d;
+}
+
 .first-display{
     height: calc(100vh - 85px);
     width: 100%;
     overflow: hidden;
-    background-color: hsla(200, 89%, 16%, 0.5);
+    background: linear-gradient(45deg, rgba(4,18,77,0.5) 0%, rgba(33,72,242,0.5) 100%);
+}
+
+.first-display div{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 30px;
 }
 
 .first-display img{
@@ -20,24 +31,118 @@ html{
 }
 
 .first-display h1{
-    position: relative;
-    top: 30vh;
-    left: 5vw;
     font-size: 60px;
     font-family: remond;
 }
 
 .first-display p{
-    position: relative;
-    top: 30vh;
     font-family: noto;
+}
+
+.first-display p,.first-display h1{
+    margin-block: 10px;
+}
+
+.about-anchor-link{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    fill: #fefbee;
+    padding: 20px;
+    opacity: 0.5;
+    transition: 0.2s;
+    animation-name: about-anchor-link;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.about-anchor-link:hover{
+    opacity: 1;
+    transition: 0.2s;
+}
+
+@keyframes about-anchor-link{
+    0%{
+        top: calc(100vh - 75px);
+    }
+    50%{
+        top: calc(100vh - 85px);
+    }
+    100%{
+        top: calc(100vh - 75px);
+    }
+}
+
+.about-anchor{
+    position: absolute;
+    top: calc(100vh - 84px);
 }
 
 .about-home{
     height: calc(100vh - 85px);
     width: 100%;
+    background-color: #fefbee;
 }
 
-body{
-    background-color: #04354d;
+.about-home-text h1::selection,.about-home-text p::selection{
+    color: #fefbee;
+    background-color: #010101;
+}
+
+.about-home > div:not(.about-anchor){
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-inline: 30px;
+}
+
+.about-home-image-frame{
+    width: 800px;
+    aspect-ratio: 16 / 9;
+    margin: 15px;
+    border-radius: 30px;
+    border: 3px solid #010101;
+    transition: border-color 0.2s;
+    overflow: hidden;
+}
+
+.about-home img{
+    width: 100%;
+    transition: scale 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.about-home img:hover{
+    scale: 1.5;
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.about-home-image-frame:hover{
+    border-color: #d4af0c;
+    transition: 0.2s;
+}
+
+.about-home-text{
+    padding: 15px;
+}
+
+.about-home-text *{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #010101;
+}
+
+.about-home-text h1{
+    font-family: remond;
+    margin-left: 5px;
+    font-size: 50px;
+}
+
+.about-home-text p{
+    font-family: noto;
 }

@@ -2,6 +2,26 @@
     margin: 0px;
     padding: 0px;
     color: #fefbee;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 1em;
+    background-color: #010411;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #04124d;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: hsla(229, 89%, 54%, 0.5);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsla(229, 89%, 54%, 1);
 }
 
 ::selection{
@@ -33,17 +53,23 @@ header{
     position: sticky;
     top: 0;
     box-shadow: 0px 0px 10px #010411;
-    z-index: 2;
+    z-index: 1;
 }
 
 .main-logo,.nav-links{
     display: flex;
-    align-items: center;
 }
 
 .main-logo{
     float: left;
     margin-left: 5%;
+    overflow: hidden;
+    align-items: center;
+}
+
+.main-logo:hover .text-logo{ /** yooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo **/
+    transform: translateY(100px);
+    transition: 1s;
 }
 
 .logo{
@@ -61,25 +87,40 @@ header{
     margin-top: 20px;
     margin-left: 5px;
     cursor: default;
+    transition: 1s;
 }
 
 .nav-links{
     list-style: none;
     float: right;
-    padding-right: 5%;
+    margin-right: 5%;
 }
 
 .nav-link,.nav-link-active{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 30.5px;
-    padding-bottom: 30.5px;
     font-family: roboto;
+    height: 24px;
+    overflow: hidden;
 }
 
-.nav-link:hover a{
+.nav-link{
+    transition: background-color 0.2s;
+    padding-block: 30.5px;
+}
+
+.nav-link a:nth-child(1){
+    transition: color 0.2s;
+    padding-inline: 10px;
+    padding-block: 30.5px;
+}
+
+.nav-link:hover a:nth-child(1){
     color: #010411;
     transition: 0.2s;
+}
+
+.nav-link:active a:nth-child(1){
+    color: #04124d;
+    transition: 0.1s;
 }
 
 .nav-link:hover{
@@ -89,10 +130,20 @@ header{
 
 .nav-link-active{
     background-color: #04124d;
+    transition: background-color 0.2s;
+    padding-block: 30.5px;
 }
 
-.nav-link-active a{
+.nav-link-active a:nth-child(1){
     color: #2148f2;
+    transition: color 0.2s;
+    padding-inline: 10px;
+    padding-block: 30.5px;
+}
+
+.nav-link-active:hover a:nth-child(1){
+    color: #d4af0c;
+    transition: 0.2s;
 }
 
 .nav-link-active:hover{
@@ -100,9 +151,94 @@ header{
     transition: 0.2s;
 }
 
-.nav-link a,.nav-link-active a{
+.nav-link a:nth-child(1),.nav-link-active a:nth-child(1){
     text-decoration: none;
     font-size: 20px;
+}
+
+.nav-link a:nth-child(2),.nav-link-active a:nth-child(2){
+    padding: 100px;
+}
+
+.nav-link svg,.nav-link-active svg{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 50%;
+    height: 25px;
+    align-items: center;
+    padding-inline: 17px;
+    padding-top: 35px;
+    padding-bottom: 30.5px;
+}
+
+.nav-link div,.nav-link-active div{
+    position: relative;
+    top: 0px;
+    transition: 0.5s;
+    animation-name: nav-link;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.nav-link:hover div,.nav-link-active:hover div{
+    transform: translateY(-58px);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+
+.nav-links:hover div{
+    animation: none;
+}
+
+.nav-link-animation-1{
+    animation-delay: 0.25s;
+}
+
+.nav-link-animation-2{
+    animation-delay: 0.5s;
+}
+
+.nav-link-animation-3{
+    animation-delay: 0.75s;
+}
+
+@keyframes nav-link{
+    0%,68%{
+        top: 0px;
+    }
+    70%,98%{
+        top: -58px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+.nav-link svg{
+    fill: #fefbee;
+    transition: 0.2s;
+}
+
+.nav-link:hover svg{
+    fill: #010411;
+    transition: 0.2s;
+}
+
+.nav-link:active svg{
+    fill: #04124d;
+    transition: 0.1s;
+}
+
+.nav-link-active svg{
+    fill: #2148f2;
+    transition: 0.2s;
+}
+
+.nav-link-active:hover svg{
+    fill: #d4af0c;
+    transition: 0.2s;
 }
 
 footer{

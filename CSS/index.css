@@ -1,0 +1,260 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: #fefbee;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 1em;
+    background-color: #010411;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #04124d;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: hsla(229, 89%, 54%, 0.5);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsla(229, 89%, 54%, 1);
+}
+
+::selection{
+    color: #010411;
+    background-color: #fefbee;
+}
+
+@font-face{
+    font-family: noto;
+    src: url(../resources/font/NotoSans-Light.ttf);
+}
+
+@font-face{
+    font-family: remond;
+    src: url(../resources/font/Remond-Regular.ttf);
+}
+
+@font-face{
+    font-family: roboto;
+    src: url(../resources/font/RobotoCondensed-Bold.ttf);
+}
+
+body{
+    overflow: hidden;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 85vw;
+    height: 65vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+
+.logo svg{
+    fill: #fefbee;
+    height: 400px;
+}
+
+.text-logo-0,.text-logo-1,.text-logo-2,.text-logo-3,.text-logo-4,.text-logo-5,.text-logo-6,.text-logo-7{
+    transition: 0.5s;
+}
+
+.logo:hover .text-logo-0{
+    transform: translateX(10px);
+    transition: 0.5s;
+}
+
+.logo:hover .text-logo-1{
+    transform: translateX(20px);
+    transition: 0.5s;
+}
+
+.logo:hover .text-logo-2{
+    transform: translateX(30px);
+    transition: 0.5s;
+}
+
+.logo:hover .text-logo-3{
+    transform: translateX(40px);
+    transition: 0.5s;
+}
+
+.logo:hover .text-logo-4{
+    transform: translateX(50px);
+    transition: 0.5s;
+}
+
+.logo:hover .text-logo-5{
+    transform: translateX(60px);
+    transition: 0.5s;
+}
+
+.logo:hover .text-logo-6{
+    transform: translateX(70px);
+    transition: 0.5s;
+}
+
+.logo:hover .text-logo-7{
+    transform: rotateZ(5deg);
+    transform-origin: 15% 59%;
+    transition: 0.5s;
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+}
+
+.logo,.text-and-link{
+    margin-inline: 20px;
+}
+
+.text{
+    font-family: remond;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.link{
+    margin-top: 30px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.link a{
+    text-decoration: none;
+    font-family: roboto;
+    font-size: 50px;
+    padding: 10px;
+    padding-inline: 20px;
+    transition: 0.3s;
+    border-radius: 15px;
+    border: 5px solid #fefbee;
+}
+
+.link a:hover{
+    background-color: #fefbee;
+    color: #d4af0c;
+    padding-inline: 50px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.link:hover{
+    transition: 0.3s;
+}
+
+.text-and-link{
+    align-self: center;
+    width: auto;
+}
+
+body{
+    background: linear-gradient(45deg, rgba(1,4,17,0.6) 0%, rgba(4,18,77,0.6) 50%, rgba(33,72,242,0.6) 100%);
+    background-color: #010411;
+    height: calc(100vh - 20px);
+    width: calc(100vw - 20px);
+    border: 10px solid #fefbee;
+}
+
+.social-media-links{
+    display: flex;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-media-icon{
+    height: 35px;
+    margin-inline: 6px;
+}
+
+.discord-icon,.youtube-icon,.reddit-icon,.x-icon{
+    fill: hsla(49, 89%, 96%, 0.6);
+    transition: 0.2s;
+}
+
+.social-media-icon:hover .discord-icon{
+    fill: #5865F2;
+    transition: 0.2s;
+}
+
+.social-media-icon:hover .youtube-icon{
+    fill: #ff0000;
+    transition: 0.2s;
+}
+
+.social-media-icon:hover .reddit-icon{
+    fill: #ff5700;
+    transition: 0.2s;
+}
+
+.social-media-icon:hover .x-icon{
+    fill: #ffffff;
+    transition: 0.2s;
+}
+
+.social-media-comment{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    font-family: noto;
+    font-size: 15px;
+    width: 200px;
+    visibility: hidden;
+    color: hsla(49, 89%, 96%, 0);
+    transition: 0.2s;
+}
+
+.discord-link:hover + .discord-comment{
+    visibility: visible;
+    color: hsla(49, 89%, 96%, 1);
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+.youtube-link:hover + .youtube-comment{
+    visibility: visible;
+    color: hsla(49, 89%, 96%, 1);
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+.reddit-link:hover + .reddit-comment{
+    visibility: visible;
+    color: hsla(49, 89%, 96%, 1);
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+.x-link:hover + .x-comment{
+    visibility: visible;
+    color: hsla(49, 89%, 96%, 1);
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}

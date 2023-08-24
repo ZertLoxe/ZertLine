@@ -46,6 +46,7 @@
 
 body{
     overflow: hidden;
+    position: relative;
 }
 
 .glass{
@@ -122,7 +123,6 @@ main{
     width: 80%;
     display: flex;
     margin: auto;
-    overflow: hidden;
 }
 
 .logo,.text-and-link{
@@ -144,6 +144,7 @@ main{
 }
 
 .link a{
+    position: relative;
     text-decoration: none;
     font-family: roboto;
     font-size: 50px;
@@ -152,6 +153,7 @@ main{
     transition: 0.3s;
     border-radius: 15px;
     border: 5px solid #fefbee;
+    z-index: 5;
 }
 
 .link a:hover{
@@ -169,6 +171,29 @@ main{
 .text-and-link{
     align-self: center;
     width: auto;
+}
+
+.page-cover-animation{
+    position: absolute;
+    display: block;
+    top: 45.7%;
+    left: 67.4%;
+    width: 100px;
+    height: 100px;
+    scale: 0;
+    z-index: 3;
+    fill: #fefbee;
+}
+
+.link a:focus + .page-cover-animation{
+    transition: 2s;
+    scale: 50;
+}
+
+.link a:focus{
+    color: #fefbee;
+    transition: 0.5s;
+    transition-delay: 0.5s;
 }
 
 body{

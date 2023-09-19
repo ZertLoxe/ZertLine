@@ -9,18 +9,28 @@
     
     <title>ZertLine</title>
 
-    <link rel="icon" type="image/png" href="../resources/image/head.icon.svg">
+    <link rel="icon" type="image/png" href="../resources/image/svg/head.icon.svg">
 
     <link rel="stylesheet" href="../CSS/main.css">
 
     <link rel="stylesheet" href="../CSS/sub/home.css">
+
+    <script src="../JS/main.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", (event) => {
+            linkLoadAnimation();
+        });
+        window.addEventListener('scroll', navigationScroll);
+        window.addEventListener('scroll', scrollIndicatorFunction);
+    </script>
 </head>
 <body>
-    <div class="preloading-animation"></div>
-    <header>
-        <div class="main-logo">
+    <div class="preloading-animation" id="preloading-animation"></div>
+    <header id="header">
+        <div class="main-logo" id="main-logo">
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1216.05 600">
-                    <path class="logo-icon" d="M1216.01,364.75c-2.31,132.22-111.36,237.52-243.57,235.22-132.22-2.31-120.66-37.6-299.56-95.18,144.82,4.48,180.22,70.49,299.95,72.58,119.73,2.09,218.49-93.28,220.58-213.01s-93.28-218.49-213.01-220.58c-48.46-.85-83.66-3.93-324.14,42.48-113.65,21.94-325.48,13.95-491.19-62.42C100.03,93.87,42.1,53.36,0,0,278.55,142.95,389.11,159.91,546.55,162.66c109.9,1.92,287.69-44.05,434.25-41.49,132.22,2.31,237.52,111.36,235.22,243.57Z
+                    <path class="logo-icon" shape-rendering="geometricPrecision" d="M1216.01,364.75c-2.31,132.22-111.36,237.52-243.57,235.22-132.22-2.31-120.66-37.6-299.56-95.18,144.82,4.48,180.22,70.49,299.95,72.58,119.73,2.09,218.49-93.28,220.58-213.01s-93.28-218.49-213.01-220.58c-48.46-.85-83.66-3.93-324.14,42.48-113.65,21.94-325.48,13.95-491.19-62.42C100.03,93.87,42.1,53.36,0,0,278.55,142.95,389.11,159.91,546.55,162.66c109.9,1.92,287.69-44.05,434.25-41.49,132.22,2.31,237.52,111.36,235.22,243.57Z
                     M59.96,166.19c165.3,61.26,328.06,114.5,537.36,106.71,78.35-2.92,154.26-22.13,175.34-28.93,26.65-8.6,90.75-29.78,127.37-35,90.42,6.81,122.51,25.28,122.51,25.28,0,0-94.87,11.99-160.99,24.96-66.12,12.96-104.45,33.87-202.66,42.86-198.24,18.16-436.57-13.37-436.57-13.37,0,0-138.43-93.08-162.38-122.51Z
                     M586.71,356.03c59.8-5.83,182.31-16.69,215.26-15.7,25.3,5.86,48.91,15.69,71.33,26.63-28.44,9.48-33.99,10.71-65.63,17.5-40.87-.9-162.62-10.21-220.96-28.44Z
                     M184.91,350.93s101.36,33.54,180.12,48.13c78.76,14.58,232.63,17.5,274.19,16.77s105.74,4.1,169.91,19.69c64.17,15.59,180.12,43.75,180.12,43.75,0,0-63.44,11.67-84.59,11.67s-163.34-40.71-253.04-43.02c-294.86-7.62-310.17,11.48-387.95-33.54-27.71-16.04-78.76-63.44-78.76-63.44Z
@@ -32,7 +42,7 @@
         
         <nav>
             <div class="nav-links">
-                <div class="nav-link-active">
+                <div class="nav-link-active" id="nav-link-active">
                     <div>
                         <a href="home.html">Home</a><br>
                         <a href="home.html">
@@ -42,7 +52,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-1">
                     <div class="nav-link-animation-1">
                         <a href="news.html">News</a><br>
                         <a href="news.html">
@@ -52,7 +62,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-2">
                     <div class="nav-link-animation-2">
                         <a href="projects.html">Projects</a><br>
                         <a href="projects.html">
@@ -62,7 +72,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-3">
                     <div class="nav-link-animation-3">
                         <a href="about.html">About</a><br>
                         <a href="about.html">
@@ -74,11 +84,12 @@
                 </div>
             </div>
         </nav>
+        <div id="scroll-indicator-bar" class="scroll-indicator-bar"></div>
     </header>
     
     <main>
         <div class="first-display">
-            <img src="../resources/image/other/webp/bg-img.webp" alt="bg-img">
+            <img src="../resources/image/webp/bg-img.webp" alt="bg-img">
             <div>
                 <h1>Unlimit Your Imagination</h1>
                 <p>keep your imagination limitless as it is the beginning of creation.</p>
@@ -91,13 +102,13 @@
         </div>
         <div class="about-home">
             <div id="about-anchor" class="about-anchor"></div>
-            <div>
+            <div class="about-home-content">
                 <div class="about-home-image-frame">
-                    <img src="../resources/image/other/jpg/zertline-img-placeholder.jpg" alt="about image">
+                    <img src="../resources/image/jpg/zertline-img-placeholder.jpg" alt="about image">
                 </div>
                 <div class="about-home-text">
                     <h1>What is ZertLine ?</h1>
-                    <p>The ZertLine Projects Website is made to give a perspective on everything related to ZertLine and what we are working on in terms of projects and plans by uploading project-related pages, news, and all things about us.</p>
+                    <p>The ZertLine Projects website offers an immersive window into the world of ZertLine. Discover our ongoing projects, future plans, and the latest updates that define us. Through project-specific pages, news releases, and a wealth of information, we invite you to delve into the heart of our endeavors. Join us on a journey where innovation meets inspiration, all in one meticulously crafted digital space.</p>
                 </div>
             </div>
         </div>

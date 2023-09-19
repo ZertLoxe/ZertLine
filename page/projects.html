@@ -9,16 +9,23 @@
     
     <title>ZertLine</title>
 
-    <link rel="icon" type="image/png" href="../resources/image/head.icon.svg">
+    <link rel="icon" type="image/png" href="../resources/image/svg/head.icon.svg">
 
     <link rel="stylesheet" href="../CSS/main.css">
 
     <link rel="stylesheet" href="../CSS/sub/home.css">
+
+    <script src="../JS/main.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', navigationScroll);
+        window.addEventListener('scroll', scrollIndicatorFunction);
+    </script>
 </head>
 <body>
     <div class="preloading-animation"></div>
-    <header>
-        <div class="main-logo">
+    <header id="header">
+        <div class="main-logo" id="main-logo">
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2554.58 1260.43">
                     <path class="logo-icon" d="M2554.51,766.23c-4.85,277.75-233.93,498.97-511.68,494.13-277.75-4.85-253.47-78.99-629.29-199.95,304.22,9.4,378.59,148.08,630.12,152.47s458.98-195.95,463.37-447.47c4.39-251.52-195.95-458.98-447.47-463.37-101.79-1.78-175.74-8.26-680.93,89.24-238.75,46.08-683.75,29.3-1031.85-131.13C210.14,197.19,88.45,112.1,0,0,585.15,300.3,817.41,335.93,1148.15,341.7c230.87,4.03,604.36-92.53,912.23-87.15,277.75,4.85,498.97,233.93,494.13,511.68Z
                     M125.97,349.12c347.23,128.68,313.06,118.89,563.74,171.57,254.61,53.51,414.01,58.22,565.11,52.6,164.6-6.13,324.06-46.48,368.34-60.77,55.98-18.06,190.63-62.55,267.57-73.53,189.96,14.3,257.36,53.11,257.36,53.11,0,0-199.3,25.19-338.19,52.43-138.89,27.23-219.42,71.15-425.72,90.04-206.3,18.89-234.89,5.92-420.77,8.68-185.87,2.76-496.34-36.77-496.34-36.77,0,0-290.8-195.55-341.11-257.36Z
@@ -32,7 +39,7 @@
         
         <nav>
             <div class="nav-links">
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-1">
                     <div>
                         <a href="home.html">Home</a><br>
                         <a href="home.html">
@@ -42,7 +49,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-2">
                     <div class="nav-link-animation-1">
                         <a href="news.html">News</a><br>
                         <a href="news.html">
@@ -52,7 +59,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link-active">
+                <div class="nav-link-active" id="nav-link-active">
                     <div class="nav-link-animation-2">
                         <a href="projects.html">Projects</a><br>
                         <a href="projects.html">
@@ -62,7 +69,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-3">
                     <div class="nav-link-animation-3">
                         <a href="about.html">About</a><br>
                         <a href="about.html">
@@ -74,6 +81,7 @@
                 </div>
             </div>
         </nav>
+        <div id="scroll-indicator-bar" class="scroll-indicator-bar"></div>
     </header>
     
     <main>

@@ -3,10 +3,6 @@ html{
     max-width: 100vw;
 }
 
-body{
-    background-color: #04354d;
-}
-
 .first-display{
     height: calc(100vh - 85px);
     width: 100%;
@@ -101,7 +97,7 @@ body{
 }
 
 .about-home-image-frame{
-    width: 800px;
+    min-width: 450px;
     aspect-ratio: 16 / 9;
     margin: 15px;
     border-radius: 30px;
@@ -111,7 +107,7 @@ body{
 }
 
 .about-home img{
-    width: 100%;
+    width: 450px;
     transition: scale 0.5s;
     transition-timing-function: ease-out;
 }
@@ -145,4 +141,8 @@ body{
 
 .about-home-text p{
     font-family: noto;
+}
+
+.about-home-content{
+    height: 500px;
 }

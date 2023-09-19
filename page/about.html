@@ -9,16 +9,23 @@
     
     <title>ZertLine</title>
 
-    <link rel="icon" type="image/png" href="../resources/image/head.icon.svg">
+    <link rel="icon" type="image/png" href="../resources/image/svg/head.icon.svg">
 
     <link rel="stylesheet" href="../CSS/main.css">
 
-    <link rel="stylesheet" href="../CSS/sub/home.css">
+    <link rel="stylesheet" href="../CSS/sub/about.css">
+
+    <script src="../JS/main.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', navigationScroll);
+        window.addEventListener('scroll', scrollIndicatorFunction);
+    </script>
 </head>
 <body>
     <div class="preloading-animation"></div>
-    <header>
-        <div class="main-logo">
+    <header id="header">
+        <div class="main-logo" id="main-logo">
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2554.58 1260.43">
                     <path class="logo-icon" d="M2554.51,766.23c-4.85,277.75-233.93,498.97-511.68,494.13-277.75-4.85-253.47-78.99-629.29-199.95,304.22,9.4,378.59,148.08,630.12,152.47s458.98-195.95,463.37-447.47c4.39-251.52-195.95-458.98-447.47-463.37-101.79-1.78-175.74-8.26-680.93,89.24-238.75,46.08-683.75,29.3-1031.85-131.13C210.14,197.19,88.45,112.1,0,0,585.15,300.3,817.41,335.93,1148.15,341.7c230.87,4.03,604.36-92.53,912.23-87.15,277.75,4.85,498.97,233.93,494.13,511.68Z
                     M125.97,349.12c347.23,128.68,313.06,118.89,563.74,171.57,254.61,53.51,414.01,58.22,565.11,52.6,164.6-6.13,324.06-46.48,368.34-60.77,55.98-18.06,190.63-62.55,267.57-73.53,189.96,14.3,257.36,53.11,257.36,53.11,0,0-199.3,25.19-338.19,52.43-138.89,27.23-219.42,71.15-425.72,90.04-206.3,18.89-234.89,5.92-420.77,8.68-185.87,2.76-496.34-36.77-496.34-36.77,0,0-290.8-195.55-341.11-257.36Z
@@ -32,7 +39,7 @@
         
         <nav>
             <div class="nav-links">
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-1">
                     <div>
                         <a href="home.html">Home</a><br>
                         <a href="home.html">
@@ -42,7 +49,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-2">
                     <div class="nav-link-animation-1">
                         <a href="news.html">News</a><br>
                         <a href="news.html">
@@ -52,7 +59,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" id="nav-link-3">
                     <div class="nav-link-animation-2">
                         <a href="projects.html">Projects</a><br>
                         <a href="projects.html">
@@ -62,7 +69,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav-link-active">
+                <div class="nav-link-active" id="nav-link-active">
                     <div class="nav-link-animation-3">
                         <a href="about.html">About</a><br>
                         <a href="about.html">
@@ -74,31 +81,106 @@
                 </div>
             </div>
         </nav>
+        <div id="scroll-indicator-bar" class="scroll-indicator-bar"></div>
     </header>
     
     <main>
-        <div class="first-display">
-            <img src="../resources/image/other/webp/bg-img.webp" alt="bg-img">
-            <div>
-                <h1>Unlimit Your Imagination</h1>
-                <p>keep your imagination limitless as it is the beginning of creation.</p>
+        <div class="about">
+            <div class="about-title-holder">
+                <h1 class="about-title">About</h1>
             </div>
-            <a href="#about-anchor">
-                <svg class="about-anchor-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 917.16 596.46">
-                    <path d="M850.02,29.29l37.85,37.85c39.05,39.05,39.05,102.37,0,141.42l-358.61,358.61c-39.05,39.05-102.37,39.05-141.42,0L29.29,208.63c-39.05-39.05-39.05-102.37,0-141.42L67.17,29.32c39.05-39.05,102.37-39.05,141.42,0l214.63,214.63c19.53,19.53,51.18,19.53,70.71,0L708.6,29.29c39.05-39.05,102.37-39.05,141.42,0Z"/>
+            <div class="about-text-decoration-holder">
+                <svg class="about-text-decoration about-text-decoration-tl" viewBox="0 0 1000 1000">
+                    <rect x="-250" y="-250" width="1000" height="1000"/>
                 </svg>
-            </a>
+                <svg class="about-text-decoration about-text-decoration-tr" viewBox="0 0 1000 1000">
+                    <rect x="250" y="-250" width="1000" height="1000"/>
+                </svg>
+                <svg class="about-text-decoration about-text-decoration-br" viewBox="0 0 1000 1000">
+                    <rect x="250" y="250" width="1000" height="1000"/>
+                </svg>
+                <svg class="about-text-decoration about-text-decoration-bl" viewBox="0 0 1000 1000">
+                    <rect x="-250" y="250" width="1000" height="1000"/>
+                </svg>
+                <p class="about-text">At ZertLine Projects, it's all about the art of creation and the power of imagination. Our platform is dedicated to bringing you an immersive experience encompassing everything that defines us – from our visionary projects to the latest developments in our journey. We take immense pride in curating and delivering a comprehensive collection of content right here on our website, all thoughtfully organized to offer you a seamless exploration into our world of innovation. Welcome to the realm where creativity knows no bounds, and every idea takes shape.</p>
+            </div>
+            <div class="social-media-display">
+                <h1 class="social-media-title">Join and support our social media!</h1>
+                <div class="social-media-card-deck">
+                    <div class="social-media-card social-media-card-discord">
+                        <div id="social-media-card-icon-holder-discord" class="social-media-card-icon-holder">
+                            <svg id="social-media-card-icon-discord" class="social-media-card-icon" overflow="visible" viewBox="0 0 1000 775.16">
+                                <path d="M641.67,0c-9.91,17.75-18.75,36.09-26.45,54.91-75.73-11.98-152.88-11.98-228.6,0-7.71-18.82-16.54-37.15-26.46-54.91-71.34,12.19-140.69,34.02-206.14,64.89C36.96,233.81-16.12,438.89,4.27,643.38c76.28,57.34,161.89,101.08,253.06,129.28,20.76-27.43,39.29-56.47,55.41-86.85-29.75-10.97-58.34-24.84-85.35-41.43,7.41-4.93,14.42-10.44,20.96-16.47,78.79,37.95,165.11,57.66,252.56,57.66s173.78-19.71,252.56-57.66c6.99,5.99,13.98,11.48,20.97,16.47-27.17,16.45-55.73,30.48-85.35,41.93,15.45,31.07,33.48,60.79,53.91,88.84,91.06-28.1,176.52-71.84,252.56-129.28,20.88-204.53-32.24-409.78-149.74-578.5C781.09,35.87,712.43,13.21,641.67,0ZM335.2,526.59c-24.98-1.79-48.29-13.19-65.04-31.81-16.75-18.61-25.64-42.99-24.8-68.02-.97-25.06,7.88-49.51,24.66-68.15,16.78-18.64,40.16-30.01,65.19-31.68,25.02,1.67,48.41,13.03,65.19,31.68,16.78,18.64,25.62,43.09,24.66,68.15,.97,25.06-7.88,49.51-24.66,68.15-16.78,18.64-40.16,30-65.19,31.68Zm331.43,0c-24.98-1.79-48.29-13.19-65.04-31.81-16.75-18.61-25.64-42.99-24.8-68.02-.97-25.06,7.88-49.51,24.66-68.15,16.78-18.64,40.16-30.01,65.18-31.68,25.07,1.54,48.53,12.87,65.33,31.54,16.8,18.67,25.61,43.19,24.51,68.28,1.09,25.09-7.71,49.62-24.51,68.28-16.8,18.67-40.26,30-65.33,31.54Z"/>
+                            </svg>
+                        </div>
+                        <h1>Discord</h1>
+                        <p>our discord server comming soon</p>
+                        <div class="social-media-card-link">
+                            <a onclick="document.getElementById('social-media-card-icon-holder-discord').style.height = '330px';
+                            document.getElementById('social-media-card-icon-holder-discord').style.backgroundColor = '#5865F2';
+                            document.getElementById('social-media-card-icon-discord').style.fill = '#fefbee';
+                            setTimeout(()=>{document.getElementById('social-media-card-icon-holder-discord').style.height = '200px'
+                            document.getElementById('social-media-card-icon-holder-discord').style.backgroundColor = '#fefbee';
+                            document.getElementById('social-media-card-icon-discord').style.fill = '#5865F2';},1800);" href="javascript:setTimeout(()=>{window.open('', '_blank') },900);">Soon</a>
+                        </div>
+                    </div>
+                    <div class="social-media-card social-media-card-youtube">
+                        <div id="social-media-card-icon-holder-youtube" class="social-media-card-icon-holder">
+                            <svg id="social-media-card-icon-youtube" class="social-media-card-icon" overflow="visible" viewBox="0 115 1000 720">
+                                <path d="M503.19,124.94h5.56c51.37,.19,311.69,2.06,381.87,20.94,21.22,5.76,40.55,16.99,56.07,32.56,15.52,15.57,26.68,34.95,32.37,56.19,6.31,23.75,10.75,55.19,13.75,87.63l.63,6.5,1.37,16.25,.5,6.5c4.06,57.13,4.56,110.62,4.62,122.31v4.69c-.06,12.12-.62,69.25-5.12,128.75l-.5,6.56-.56,6.5c-3.12,35.75-7.75,71.25-14.69,97.37-5.67,21.25-16.82,40.63-32.34,56.21-15.52,15.58-34.87,26.8-56.09,32.54-72.5,19.5-348.06,20.88-386.25,20.94h-8.87c-19.31,0-99.19-.37-182.94-3.25l-10.63-.37-5.44-.25-10.69-.44-10.69-.44c-69.37-3.06-135.44-8-165.87-16.25-21.22-5.74-40.56-16.95-56.08-32.52-15.52-15.57-26.68-34.94-32.36-56.17-6.94-26.06-11.56-61.63-14.69-97.37l-.5-6.56-.5-6.5c-3.08-42.35-4.79-84.79-5.13-127.25v-7.69c.13-13.44,.62-59.88,4-111.13l.44-6.44,.19-3.25,.5-6.5,1.37-16.25,.62-6.5c3-32.44,7.44-63.94,13.75-87.63,5.67-21.25,16.82-40.63,32.34-56.21,15.52-15.58,34.87-26.8,56.09-32.54,30.44-8.13,96.5-13.13,165.87-16.25l10.63-.44,10.75-.37,5.37-.19,10.69-.44c59.48-1.91,118.99-2.98,178.5-3.19h12.06v-.06Zm-103.19,200.63v301.13l259.81-150.5-259.81-150.62Z"/>
+                            </svg>
+                        </div>
+                        <h1>Youtube</h1>
+                        <p>Subscribe to our channel on youtube</p>
+                        <div class="social-media-card-link">
+                            <a onclick="document.getElementById('social-media-card-icon-holder-youtube').style.height = '330px';
+                            document.getElementById('social-media-card-icon-holder-youtube').style.backgroundColor = '#ff0000';
+                            document.getElementById('social-media-card-icon-youtube').style.fill = '#fefbee';
+                            setTimeout(()=>{document.getElementById('social-media-card-icon-holder-youtube').style.height = '200px'
+                            document.getElementById('social-media-card-icon-holder-youtube').style.backgroundColor = '#fefbee';
+                            document.getElementById('social-media-card-icon-youtube').style.fill = '#ff0000';},1800);" href="javascript:setTimeout(()=>{window.open('https://www.youtube.com/@zertline', '_blank') },900);">Subscribe</a>
+                        </div>
+                    </div>
+                    <div class="social-media-card social-media-card-reddit">
+                        <div id="social-media-card-icon-holder-reddit" class="social-media-card-icon-holder">
+                            <svg  id="social-media-card-icon-reddit" class="social-media-card-icon" overflow="visible" viewBox="0 0 1000 1000">
+                                <path d="M1000,500c0,276.14-223.86,500-500,500S0,776.14,0,500,223.86,0,500,0s500,223.86,500,500Zm-239.77-73.1c40.35,0,73.1,32.75,73.1,73.1,0,29.82-18.13,55.55-42.11,67.25,1.17,7.02,1.75,14.03,1.75,21.64,0,112.28-130.41,202.92-291.81,202.92s-291.81-90.64-291.81-202.92c0-7.6,.59-15.2,1.75-22.22-25.73-11.7-43.27-36.84-43.27-66.67,0-40.35,32.75-73.1,73.1-73.1,19.3,0,37.43,8.19,50.29,20.47,50.29-36.84,119.88-59.65,197.66-61.99l36.84-174.27c1.17-3.51,2.92-6.43,5.85-8.19,2.92-1.75,6.43-2.34,9.94-1.75l121.05,25.73c8.19-17.54,25.73-29.24,46.2-29.24,28.66,0,52.05,23.39,52.05,52.05s-23.39,52.05-52.05,52.05-50.88-22.22-52.05-49.71l-108.19-22.81-33.33,156.14c76.02,2.93,145.03,26.32,194.73,61.99,12.87-12.87,30.41-20.47,50.29-20.47Zm-374.85,73.1c-28.66,0-52.05,23.39-52.05,52.05s23.39,52.05,52.05,52.05,52.05-23.39,52.05-52.05-23.39-52.05-52.05-52.05Zm115.2,227.48c19.88,0,87.72-2.34,123.39-38.01,5.26-5.26,5.26-13.45,1.17-19.3-5.26-5.26-14.03-5.26-19.3,0-22.81,22.22-70.17,30.41-104.68,30.41s-82.46-8.19-104.68-30.41c-5.26-5.26-14.03-5.26-19.3,0-5.26,5.26-5.26,14.03,0,19.3,35.09,35.09,103.51,38.01,123.39,38.01Zm61.99-175.44c0,28.65,23.39,52.05,52.05,52.05s52.05-23.39,52.05-52.05-23.39-52.05-52.05-52.05-52.05,23.39-52.05,52.05Z"/>
+                            </svg>
+                        </div>
+                        <h1>Reddit</h1>
+                        <p>Join our community on reddit</p>
+                        <div class="social-media-card-link">
+                            <a onclick="document.getElementById('social-media-card-icon-holder-reddit').style.height = '330px';
+                            document.getElementById('social-media-card-icon-holder-reddit').style.backgroundColor = '#ff5700';
+                            document.getElementById('social-media-card-icon-reddit').style.fill = '#fefbee';
+                            setTimeout(()=>{document.getElementById('social-media-card-icon-holder-reddit').style.height = '200px'
+                            document.getElementById('social-media-card-icon-holder-reddit').style.backgroundColor = '#fefbee';
+                            document.getElementById('social-media-card-icon-reddit').style.fill = '#ff5700';},1800);" href="javascript:setTimeout(()=>{window.open('https://www.reddit.com/r/ZertLine/', '_blank') },900);">Join</a>
+                        </div>
+                    </div>
+                    <div class="social-media-card social-media-card-x">
+                        <div id="social-media-card-icon-holder-x" class="social-media-card-icon-holder">
+                            <svg id="social-media-card-icon-x" class="social-media-card-icon" overflow="visible" viewBox="0 0 1000 903.91">
+                                <path d="M787.56,0h153.34l-335,382.89,394.1,521.02h-308.58l-241.69-316L173.18,903.91H19.75L378.07,494.37,0,0H316.41l218.47,288.84L787.56,0Zm-53.82,812.13h84.97L270.25,86.96h-91.18L733.74,812.13Z"/>
+                            </svg>
+                        </div>
+                        <h1>X</h1>
+                        <p>Follow our us on x.com</p>
+                        <div class="social-media-card-link">
+                            <a onclick="document.getElementById('social-media-card-icon-holder-x').style.height = '330px';
+                            document.getElementById('social-media-card-icon-holder-x').style.backgroundColor = '#000000';
+                            document.getElementById('social-media-card-icon-x').style.fill = '#fefbee';
+                            setTimeout(()=>{document.getElementById('social-media-card-icon-holder-x').style.height = '200px'
+                            document.getElementById('social-media-card-icon-holder-x').style.backgroundColor = '#fefbee';
+                            document.getElementById('social-media-card-icon-x').style.fill = '#000000';},1800);" href="javascript:setTimeout(()=>{window.open('https://twitter.com/ZertLine', '_blank') },900);">Follow</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="about-home">
-            <div id="about-anchor" class="about-anchor"></div>
-            <div>
-                <div class="about-home-image-frame">
-                    <img src="../resources/image/other/jpg/zertline-img-placeholder.jpg" alt="about image">
-                </div>
-                <div class="about-home-text">
-                    <h1>What is ZertLine ?</h1>
-                    <p>The ZertLine Projects Website is made to give a perspective on everything related to ZertLine and what we are working on in terms of projects and plans by uploading project-related pages, news, and all things about us.</p>
-                </div>
+        <div class="credit">
+            <div class="credit-title-holder">
+                <h1 class="credit-title">Credit</h1>
             </div>
         </div>
     </main>

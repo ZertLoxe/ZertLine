@@ -1,0 +1,241 @@
+.about-title{
+    background-color: #2148f2;
+    font-family: roboto;
+    font-size: 50px;
+    padding-block: 10px;
+    color: #fefbee;
+    width: 200px;
+    text-align: center;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.about-title:hover{
+    padding-right: calc(100% - 200px);
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.about-title-holder{
+    background-color: #04124d;
+}
+
+.about-text{
+    background-color: #fefbee;
+    color: #010411;
+    padding-block: 30px;
+    padding-inline: 40px;
+    font-family: noto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 3em;
+    font-weight: 900;
+}
+
+.about-text::selection{
+    background-color: #010411;
+    color: #fefbee;
+}
+
+.about-text-decoration{
+    fill: none;
+    stroke: #2148f2;
+    position: absolute;
+    height: 50px;
+    stroke-width: 80px;
+}
+
+.about-text-decoration-tl{
+    right: 0;
+    bottom: 0;
+}
+
+.about-text-decoration-tr{
+    left: 0;
+    bottom: 0;
+}
+
+.about-text-decoration-br{
+    left: 0;
+}
+
+.about-text-decoration-bl{
+    right: 0;
+}
+
+.about-text-decoration-holder{
+    position: relative;
+}
+
+.social-media-display{
+    background-image: url(../../resources/image/webp/bg-img.webp);
+}
+
+.social-media-title{
+    position: relative;
+    text-align: center;
+    font-family: remond;
+    font-size: 40px;
+    padding-block: 20px;
+    background-color: hsla(229, 89%, 4%, 0.75);
+}
+
+.social-media-card-deck{
+    text-align: center;
+    background-color: hsla(49, 89%, 96%, 0.75);
+}
+
+.social-media-card{
+    display: inline-block;
+    background-color: #010411;
+    margin-block: 150px;
+    margin-inline: 40px;
+    width: 250px;
+    border: #fbedb2 solid 10px;
+}
+
+.social-media-card h1{
+    display: block;
+    font-family: remond;
+    margin-top: 200px;
+    padding-block: 10px;
+    justify-self: center;
+    color: #fefbee;
+    background-color: #2148f2;
+}
+
+.social-media-card p{
+    display: block;
+    font-family: noto;
+    height: 50px;
+    align-self: center;
+    padding-block: 10px;
+    justify-self: center;
+    padding-inline: 10px;
+}
+
+.social-media-card a{
+    display: block;
+    font-family: roboto;
+    text-decoration: none;
+    font-size: 25px;
+    padding-block: 10px;
+    justify-self: center;
+    color: #010411;
+    position: relative;
+    background-color: transparent;
+    z-index: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.social-media-card a:hover{
+    color: #fefbee;
+}
+
+.social-media-card-link{
+    background-color: #fefbee;
+}
+
+.social-media-card a::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: #010411;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.social-media-card a:hover::after{
+    height: 100%;
+    transition: 0.2s;
+}
+
+.social-media-card-discord a:hover::after{
+    background-color: #5865F2;
+    transition: 0.1s;
+}
+
+.social-media-card-youtube a:hover::after{
+    background-color: #ff0000;
+    transition: 0.1s;
+}
+
+.social-media-card-reddit a:hover::after{
+    background-color: #ff5700;
+    transition: 0.1s;
+}
+
+.social-media-card-x a:hover::after{
+    background-color: #000000;
+    transition: 0.1s;
+}
+
+.social-media-card-icon{
+    width: 100px;
+    fill: #04124d;
+    fill-rule: evenodd;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social-media-card-icon-holder{
+    height: 200px;
+    width: 250px;
+    background-color: #fefbee;
+    position: absolute;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.social-media-card-discord .social-media-card-icon{
+    fill: #5865F2;
+}
+
+.social-media-card-youtube .social-media-card-icon{
+    fill: #ff0000;
+}
+
+.social-media-card-reddit .social-media-card-icon{
+    fill: #ff5700;
+}
+
+.social-media-card-x .social-media-card-icon{
+    fill: #000000;
+}
+
+.credit-title{
+    background-color: #2148f2;
+    font-family: roboto;
+    font-size: 50px;
+    padding-block: 10px;
+    color: #fefbee;
+    width: 200px;
+    text-align: center;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.credit-title:hover{
+    padding-right: calc(100% - 200px);
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.credit-title-holder{
+    background-color: #04124d;
+}
+
+.credit-text{
+    background-color: #fefbee;
+    color: #010411;
+    padding-block: 30px;
+    padding-inline: 40px;
+    font-family: noto;
+    text-align: center;
+    font-size: 17px;
+}

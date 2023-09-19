@@ -29,6 +29,10 @@
     background-color: #fefbee;
 }
 
+body{
+    background-color: #010411;
+}
+
 @font-face{
     font-family: noto;
     src: url(../resources/font/NotoSans-Light.ttf);
@@ -50,24 +54,24 @@
     width: 100%;
     height: 100dvh;
     background-color: #fefbee;
-    z-index: 3;
+    z-index: 10;
     visibility: hidden;
     animation-name: preloading-animation;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: paused;
 }
 
 @keyframes preloading-animation{
     0%{
-        visibility: visible;
-        opacity: 1;
-    }
-    100%{
         visibility: hidden;
         opacity: 0;
     }
-
-
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 header{
@@ -79,7 +83,21 @@ header{
     position: sticky;
     top: 0;
     box-shadow: 0px 0px 10px #010411;
-    z-index: 1;
+    z-index: 5;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.scroll-indicator-bar{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    background-color: #d4af0c;
+    z-index: 5;
+    height: 5px;
+    width: 0%;
+    transform: scaleX(1.0015);
 }
 
 .main-logo,.nav-links{
@@ -87,21 +105,21 @@ header{
 }
 
 .main-logo{
+    background-color: hsla(229, 89%, 4%, 0.75);
     float: left;
     margin-left: 5%;
     overflow: hidden;
     align-items: center;
-}
-
-.main-logo:hover .text-logo{ /** yooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo **/
-    transform: translateY(100px);
-    transition: 1s;
+    height: 85px;
+    padding-inline: 15px;
+    align-self: center;
+    transition: 0.5s;
+    min-width: 250px;
 }
 
 .logo{
-    height: 50px;
+    height: 55px;
     margin-right: 10px;
-    margin-top: 15px;
 }
 
 .logo-icon{
@@ -110,7 +128,7 @@ header{
 
 .text-logo{
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 5px;
     cursor: default;
     transition: 1s;
@@ -129,8 +147,10 @@ header{
 }
 
 .nav-link{
+    background-color: hsla(229, 89%, 4%, 1);
     transition: background-color 0.2s;
     padding-block: 30.5px;
+    transition: 0.3s;
 }
 
 .nav-link a:nth-child(1){
@@ -150,14 +170,15 @@ header{
 }
 
 .nav-link:hover{
-    background-color: #fefbee;
-    transition: 0.2s;
+    background-color: #fefbee !important;
+    transition: 0.2s !important;
 }
 
 .nav-link-active{
-    background-color: #04124d;
+    background-color: hsla(228, 90%, 16%, 1);
     transition: background-color 0.2s;
     padding-block: 30.5px;
+    transition: 0.3s;
 }
 
 .nav-link-active a:nth-child(1){
@@ -173,8 +194,8 @@ header{
 }
 
 .nav-link-active:hover{
-    background-color: #fefbee;
-    transition: 0.2s;
+    background-color: #fefbee !important;
+    transition: 0.2s !important;
 }
 
 .nav-link a:nth-child(1),.nav-link-active a:nth-child(1){
@@ -211,7 +232,7 @@ header{
 .nav-link:hover div,.nav-link-active:hover div{
     transform: translateY(-58px);
     transition: 0.5s;
-    transition-delay: 0.3s;
+    transition-delay: 0.7s;
 }
 
 .nav-links:hover div{

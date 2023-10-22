@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1001 867.03" style="opacity:0.5;">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-2 {
+        stroke: #2148f2;
+        stroke-width: 60px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-8 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-4 {
+        fill: url(#New_Pattern_Swatch_3);
+        stroke: url(#New_Pattern_Swatch_3);
+      }
+    </style>
+    <clipPath id="clippath">
+      <polygon class="cls-3" points="2250 433.01 1750 433.01 1500 866.03 1750 1299.04 2250 1299.04 2500 866.03 2250 433.01"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <polygon class="cls-3" points="250 433.01 -250 433.01 -500 866.03 -250 1299.04 250 1299.04 500 866.03 250 433.01"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <polygon class="cls-3" points="2250 -433.01 1750 -433.01 1500 0 1750 433.01 2250 433.01 2500 0 2250 -433.01"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <polygon class="cls-3" points="1250 0 750 0 500 433.01 750 866.03 1250 866.03 1500 433.01 1250 0"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <polygon class="cls-3" points="250 -433.01 -250 -433.01 -500 0 -250 433.01 250 433.01 500 0 250 -433.01"/>
+    </clipPath>
+    <pattern id="New_Pattern_Swatch_3" data-name="New Pattern Swatch 3" x="0" y="0" width="2000" height="866.03" patternTransform="translate(-3749.5 -3713.6) scale(.5)" patternUnits="userSpaceOnUse" viewBox="0 0 2000 866.03">
+      <g>
+        <rect class="cls-3" width="2000" height="866.03"/>
+        <g class="cls-7">
+          <polyline class="cls-2" points="2450 1032.54 2700 599.53 2450 166.51 1950 166.51 1700 599.53 1950 1032.54 2242.27 1032.54"/>
+          <polyline class="cls-2" points="1757.73 1032.54 2050 1032.54 2300 599.53 2050 166.51 1550 166.51 1300 599.53 1550 1032.54"/>
+          <polyline class="cls-2" points="1300 1132.53 1550 1565.54 2050 1565.54 2300 1132.53 2050 699.51 1757.73 699.51"/>
+          <polyline class="cls-2" points="1757.73 1032.54 1700 1132.53 1950 1565.54 2450 1565.54 2700 1132.53 2450 699.51"/>
+          <polyline class="cls-2" points="2242.27 699.51 1950 699.51 1757.73 1032.54"/>
+        </g>
+        <g class="cls-5">
+          <polyline class="cls-2" points="450 1032.54 700 599.53 450 166.51 -50 166.51 -300 599.53 -50 1032.54 242.27 1032.54"/>
+          <polyline class="cls-2" points="-242.27 1032.54 50 1032.54 300 599.53 50 166.51 -450 166.51 -700 599.53 -450 1032.54"/>
+          <polyline class="cls-2" points="-700 1132.53 -450 1565.54 50 1565.54 300 1132.53 50 699.51 -242.27 699.51"/>
+          <polyline class="cls-2" points="-242.27 1032.54 -300 1132.53 -50 1565.54 450 1565.54 700 1132.53 450 699.51"/>
+          <polyline class="cls-2" points="242.27 699.51 -50 699.51 -242.27 1032.54"/>
+        </g>
+        <g class="cls-1">
+          <polyline class="cls-2" points="2450 166.51 2700 -266.5 2450 -699.51 1950 -699.51 1700 -266.5 1950 166.51 2242.27 166.51"/>
+          <polyline class="cls-2" points="1757.73 166.51 2050 166.51 2300 -266.5 2050 -699.51 1550 -699.51 1300 -266.5 1550 166.51"/>
+          <polyline class="cls-2" points="1300 266.5 1550 699.51 2050 699.51 2300 266.5 2050 -166.51 1757.73 -166.51"/>
+          <polyline class="cls-2" points="1757.73 166.51 1700 266.5 1950 699.51 2450 699.51 2700 266.5 2450 -166.51"/>
+          <polyline class="cls-2" points="2242.27 -166.51 1950 -166.51 1757.73 166.51"/>
+        </g>
+        <g class="cls-8">
+          <path class="cls-2" d="M1450,599.53"/>
+          <polyline class="cls-2" points="1450 599.53 1700 166.51 1450 -266.5 950 -266.5 700 166.51 950 599.53 1242.27 599.53"/>
+          <polyline class="cls-2" points="757.73 599.53 1050 599.53 1300 166.51 1050 -266.5 550 -266.5 300 166.51 550 599.53"/>
+          <polyline class="cls-2" points="300 699.51 550 1132.53 1050 1132.53 1300 699.51 1050 266.5 757.73 266.5"/>
+          <polyline class="cls-2" points="757.73 599.53 700 699.51 950 1132.53 1450 1132.53 1700 699.51 1450 266.5"/>
+          <polyline class="cls-2" points="1242.27 266.5 950 266.5 757.73 599.53"/>
+        </g>
+        <g class="cls-6">
+          <path class="cls-2" d="M450,166.51"/>
+          <polyline class="cls-2" points="450 166.51 700 -266.5 450 -699.51 -50 -699.51 -300 -266.5 -50 166.51 242.27 166.51"/>
+          <polyline class="cls-2" points="-242.27 166.51 50 166.51 300 -266.5 50 -699.51 -450 -699.51 -700 -266.5 -450 166.51"/>
+          <polyline class="cls-2" points="-700 266.5 -450 699.51 50 699.51 300 266.5 50 -166.51 -242.27 -166.51"/>
+          <polyline class="cls-2" points="-242.27 166.51 -300 266.5 -50 699.51 450 699.51 700 266.5 450 -166.51"/>
+          <polyline class="cls-2" points="242.27 -166.51 -50 -166.51 -242.27 166.51"/>
+        </g>
+      </g>
+    </pattern>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <rect class="cls-4" x=".5" y=".5" width="1000" height="866.03"/>
+  </g>
+</svg>

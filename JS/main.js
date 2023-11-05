@@ -57,7 +57,7 @@ function navigationScroll() {
         getElement("header").style.background = "#010411";
         getElement("header").style.backdropFilter = "blur(0px)";
         getElement("header").style.border = "0";
-        getElement("header").style.boxShadow = "0";
+        getElement("header").style.boxShadow = "0px 0px 10px #010411";
         getElement("header").style.height = "85px";
         getElement("main-logo").style.height = "85px";
         getElement("main-logo").style.marginBlock = "0px";

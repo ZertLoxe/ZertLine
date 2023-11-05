@@ -52,6 +52,16 @@
     margin-block: 15px;
 }
 
+#news-time{
+    font-family: remond;
+    font-size: 15px;
+    margin-left: 20px;
+    color: #6321f2;
+    background-color: hsla(49, 89%, 96%, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+}
+
 #news-title{
     font-family: remond;
     color: #fbedb2;

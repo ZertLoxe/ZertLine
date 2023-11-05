@@ -23,8 +23,12 @@ const targetTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 fetch(directLink)
 .then(news => news.json())
 .then((news) => {
-  let out = ""
+  let out = "";
+  let outMedia = "";
   for (var i = news.length - 1; i >= 0; i--) {
+    for (let j = 0; j < news[i].media.length; j++) {
+      outMedia += news[i].media[j] + ;
+    }
     out += "<div id='news-container'><div id='news-source-icon'>" +iconList[news[i].source] +
     "<h1 id='news-source'>" + news[i].source + 
     "</h1><h2 id='news-time'>"+ moment(news[i].time).tz(targetTimeZone).format('(MMM-D-YYYY) (h:mm a)') +

@@ -27,12 +27,14 @@ fetch(directLink)
   let outMedia = "";
   for (var i = news.length - 1; i >= 0; i--) {
     for (let j = 0; j < news[i].media.length; j++) {
-      outMedia += news[i].media[j] + ;
+      outMedia += "<img src='" + news[i].media[j] + "' id='news-media'>";
     }
+    let outMediaDisplay = "<div id='news-media-holder'>" + outMedia + "</div>";
     out += "<div id='news-container'><div id='news-source-icon'>" +iconList[news[i].source] +
     "<h1 id='news-source'>" + news[i].source + 
     "</h1><h2 id='news-time'>"+ moment(news[i].time).tz(targetTimeZone).format('(MMM-D-YYYY) (h:mm a)') +
     "</h2></div><div id='news-part'><h2 id='news-title'>" + news[i].title + 
+    outMediaDisplay +
     "</h2><p id='news-content'>" + news[i].content + 
     "</p><a id='news-link' href='" + news[i].link + 
     "' target='_blank'>" + news[i].link + 

@@ -15,12 +15,12 @@ function linkLoadAnimation() {
     }
 }
 
-    function scrollIndicatorFunction() {
-        var elementScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrollPos = (elementScroll / windowHeight) * 100;
-        getElement("scroll-indicator-bar").style.width = scrollPos + "%";
-    }
+function scrollIndicatorFunction() {
+    var elementScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrollPos = (elementScroll / windowHeight) * 100;
+    getElement("scroll-indicator-bar").style.width = scrollPos + "%";
+}
 
 function navigationScroll() {
     if (document.body.scrollTop > 85 || document.documentElement.scrollTop > 85) {

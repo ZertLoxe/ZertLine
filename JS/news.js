@@ -25,20 +25,31 @@ fetch(directLink)
 .then((news) => {
   let out = "";
   let outMedia = "";
+  let outMediaDisplay = "";
   for (var i = news.length - 1; i >= 0; i--) {
-    for (let j = 0; j < news[i].media.length; j++) {
-      outMedia += "<img src='" + news[i].media[j] + "' id='news-media'>";
+    mediaPosition = i;
+    console.log(i);
+    console.log(news[i].media.length);
+
+    if (news[i].media.length != 0) {
+      for (let j = 0; j < news[i].media.length; j++) {
+        outMedia += "<img src='https://drive.google.com/uc?export=view&id=" + news[i].media[j] + "' id='news-media'>";
+        console.log(outMedia);
+      }
+      outMediaDisplay = "<div id='news-media-holder'>" + outMedia + "</div>";
+      outMedia = "";
     }
-    let outMediaDisplay = "<div id='news-media-holder'>" + outMedia + "</div>";
+    
     out += "<div id='news-container'><div id='news-source-icon'>" +iconList[news[i].source] +
     "<h1 id='news-source'>" + news[i].source + 
     "</h1><h2 id='news-time'>"+ moment(news[i].time).tz(targetTimeZone).format('(MMM-D-YYYY) (h:mm a)') +
     "</h2></div><div id='news-part'><h2 id='news-title'>" + news[i].title + 
-    outMediaDisplay +
-    "</h2><p id='news-content'>" + news[i].content + 
-    "</p><a id='news-link' href='" + news[i].link + 
+    "</h2><p id='news-content'>" + news[i].content +
+    "</p>" + outMediaDisplay + 
+    "<a id='news-link' href='" + news[i].link + 
     "' target='_blank'>" + news[i].link + 
     "</a></div></div>" ;
+    outMediaDisplay = "";
   }
   getElement("news-data").innerHTML =  out + "<div class='news-footer'>That's all we have ._.</div>";
 });

@@ -26,6 +26,7 @@
     </script>
 </head>
 <body>
+    
     <div class="preloading-animation" id="preloading-animation"></div>
     <header id="header">
         <div class="main-logo" id="main-logo">
@@ -112,7 +113,60 @@
                 </div>
             </div>
         </div>
+        <div class="projects-and-news">
+            <div class="pn-content">
+                <div class="pn-news-holder">
+                    <a id="pn-anchor-news-link" class="pn-anchor-news-link" href="#pn-anchor-news" tabindex="0">
+                        <svg class="pn-anchor-news-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 917.16 596.46">
+                            <path d="M850.02,29.29l37.85,37.85c39.05,39.05,39.05,102.37,0,141.42l-358.61,358.61c-39.05,39.05-102.37,39.05-141.42,0L29.29,208.63c-39.05-39.05-39.05-102.37,0-141.42L67.17,29.32c39.05-39.05,102.37-39.05,141.42,0l214.63,214.63c19.53,19.53,51.18,19.53,70.71,0L708.6,29.29c39.05-39.05,102.37-39.05,141.42,0Z"/>
+                        </svg>
+                    </a>
+                    <div id="pn-anchor-news" class="pn-anchor-news"></div>
+                    <div class="pn-news pn-inside">
+                        <h1 class="pn-title">News</h1>
+                        <p class="pn-text pn-text-news">Introducing the ZertLine News Page - your ultimate gateway to the latest and most noteworthy updates straight from the heart of our dynamic world. This innovative tool serves as a seamless bridge connecting you, our valued user, with the cutting-edge developments curated by ZertLine. From the source of the news to its upload date, the News Page is a remarkable resource designed to deliver information in the simplest and most user-friendly manner possible. Stay effortlessly connected with the pulse of ZertLine and experience the synergy between our team and you, as we bring you the latest updates with unparalleled ease and clarity.</p>
+                        <svg class='pn-icon pn-icon-news' viewBox='0 0 999.51 901.86' overflow='visible'><path d='M737.93,7.93L48.45,440.47c-39.01,24.47-57.13,71.8-44.44,116.07l30.56,106.56c12.69,44.27,53.14,74.81,99.2,74.89l81.43,.14v60.34c0,57.1,46.29,103.38,103.38,103.38h361.84c57.1,0,103.38-46.29,103.38-103.38v-59.33l163.89,.29c34.4,.06,59.26-32.87,49.78-65.94L815.09,37.47c-9.48-33.07-48.02-47.82-77.16-29.54Zm-83.36,816.39H344.42c-28.55,0-51.69-23.14-51.69-51.69v-34.35l413.53,.73v33.62c0,28.55-23.14,51.69-51.69,51.69Z'/></svg>
+                    </div>
+                </div>
+                <div class="pn-projects-holder">
+                    <a id="pn-anchor-projects-link" class="pn-anchor-projects-link" href="#pn-anchor-projects">
+                        <svg class="pn-anchor-projects-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 917.16 596.46">
+                            <path d="M850.02,29.29l37.85,37.85c39.05,39.05,39.05,102.37,0,141.42l-358.61,358.61c-39.05,39.05-102.37,39.05-141.42,0L29.29,208.63c-39.05-39.05-39.05-102.37,0-141.42L67.17,29.32c39.05-39.05,102.37-39.05,141.42,0l214.63,214.63c19.53,19.53,51.18,19.53,70.71,0L708.6,29.29c39.05-39.05,102.37-39.05,141.42,0Z"/>
+                        </svg>
+                    </a>
+                    <div id="pn-anchor-projects" class="pn-anchor-projects"></div>
+                    <div class="pn-projects pn-inside">
+                        <h1 class="pn-title">Projects</h1>
+                        <svg class='pn-icon pn-icon-projects' viewBox='0 0 1000 956.59' overflow='visible'><path d='M500,819.71l-247.79,130.27c-41.44,21.79-89.87-13.4-81.95-59.54l47.32-275.91L17.12,419.12c-33.52-32.68-15.03-89.61,31.3-96.34l277.03-40.26L449.35,31.49c20.72-41.98,80.58-41.98,101.3,0l123.89,251.03,277.03,40.26c46.33,6.73,64.83,63.67,31.3,96.34l-200.46,195.4,47.32,275.91c7.91,46.14-40.52,81.33-81.95,59.54l-247.79-130.27Z'/></svg>
+                        <p class="pn-text pn-text-projects">Explore the heart of ZertLine through our Projects Page - your comprehensive window into the very essence of our endeavors. This dedicated platform consolidates all our projects into a single, easily navigable space, offering you a holistic view of the intricate details and components associated with each venture. The Projects Page stands as a pivotal cornerstone for ZertLine, underscoring our unwavering commitment to prioritizing and maintaining the utmost relevance of our projects. It serves as a testament to our dedication, ensuring that you can seamlessly delve into every facet and evolution of our initiatives. Explore the heart of ZertLine through our Projects Page, where transparency and currency converge to provide you with an immersive experience into our ongoing and completed endeavors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <script>
+        function pnAnchorProjectsGoBackCall() {
+            document.getElementById('pn-anchor-projects').style.transform = 'translateY(0px)';
+        }
+        let pnAnchorProjectsGoBack = false;
+        window.addEventListener('popstate', function() {
+            if (window.location.hash === '#pn-anchor-news') {
+                document.getElementById('pn-anchor-projects').style.transform = 'translateY(calc((100vh - 85px)/-3))';
+                pnAnchorProjectsGoBack = true;
+            }
+            if (window.location.hash === '#pn-anchor-projects') {
+                if (pnAnchorProjectsGoBack) {
+                    setTimeout(pnAnchorProjectsGoBackCall, 300);
+                    pnAnchorProjectsGoBack = false;
+                }
+            }
+        });
+        document.addEventListener("DOMContentLoaded", (event) => {
+            if (window.location.hash === '#pn-anchor-news') {
+            document.getElementById('pn-anchor-projects').style.transform = 'translateY(calc((100vh - 85px)/-3))';
+            }
+        });
+    </script>
     
     <footer>
         <div class="social-media-links">

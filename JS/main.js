@@ -22,9 +22,12 @@ function scrollIndicatorFunction() {
     getElement("scroll-indicator-bar").style.width = scrollPos + "%";
 }
 
+var navPosition = 0;
+
 function navigationScroll() {
     if (window.innerWidth > 740) {
-        console.log('Larger than Small Media Query Matched!');
+        navPosition = 0
+        getElement('nav-links').style.transform = 'translateY(0px)';
         if (document.body.scrollTop > 85 || document.documentElement.scrollTop > 85) {
             getElement("header").style.background = "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))";
             getElement("header").style.backdropFilter = "blur(10px)";
@@ -57,7 +60,6 @@ function navigationScroll() {
         }
         else {
             getElement("header").style.background = "#010411";
-            getElement("header").style.backdropFilter = "blur(0px)";
             getElement("header").style.border = "0";
             getElement("header").style.boxShadow = "0px 0px 10px #010411";
             getElement("header").style.height = "85px";
@@ -85,15 +87,43 @@ function navigationScroll() {
             getElement("nav-link-3").style.backgroundColor = "hsla(229, 89%, 4%, 1)";
             getElement("nav-link-active").style.backgroundColor = "hsla(228, 90%, 16%, 1)";
         }
+    }else{
+        getElement("header").style.background = "#010411";
+        getElement("header").style.border = "0";
+        getElement("header").style.boxShadow = "0px 0px 10px #010411";
+        getElement("header").style.height = "85px";
+        getElement("main-logo").style.height = "70px";
+        getElement("main-logo").style.marginBlock = "0px";
+        getElement("main-logo").style.borderRadius = "0px";
+        getElement("nav-link-1").style.backgroundColor = "hsla(229, 89%, 4%, 1)";
+        getElement("nav-link-2").style.backgroundColor = "hsla(229, 89%, 4%, 1)";
+        getElement("nav-link-3").style.backgroundColor = "hsla(229, 89%, 4%, 1)";
+        getElement("nav-link-active").style.backgroundColor = "hsla(228, 90%, 16%, 1)";
+        getElement("nav-link-1").style.paddingBlock = "30.5px";
+        getElement("nav-link-2").style.paddingBlock = "30.5px";
+        getElement("nav-link-3").style.paddingBlock = "30.5px";
+        getElement("nav-link-active").style.paddingBlock = "30.5px";
+        getElement("nav-link-1").style.marginBlock = "1vh";
+        getElement("nav-link-2").style.marginBlock = "1vh";
+        getElement("nav-link-3").style.marginBlock = "1vh";
+        getElement("nav-link-active").style.marginBlock = "1vh";
+        getElement("nav-link-1").style.marginInline = "1vh";
+        getElement("nav-link-2").style.marginInline = "1vh";
+        getElement("nav-link-3").style.marginInline = "1vh";
+        getElement("nav-link-active").style.marginInline = "1vh";
+        getElement("nav-link-1").style.borderRadius = "10px";
+        getElement("nav-link-2").style.borderRadius = "10px";
+        getElement("nav-link-3").style.borderRadius = "10px";
+        getElement("nav-link-active").style.borderRadius = "10px";
     }
 };
 
-var navPosition = 0;
+
 function navPositionAction() {
     navPosition = 1 - navPosition;
     if (navPosition === 1) {
-        document.getElementById('nav-links').style.top = '65vh';
+        document.getElementById('nav-links').style.transform = 'translateY(-300px)';
     } else {
-        document.getElementById('nav-links').style.top = '100vh';
+        document.getElementById('nav-links').style.transform = 'translateY(0px)';
     }
 };

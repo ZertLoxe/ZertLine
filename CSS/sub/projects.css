@@ -99,3 +99,28 @@ main{
     /* height: 1000px; */
     background-color: blueviolet;
 }
+
+@media only screen and (max-width: 440px) {
+    .projects-card{
+        width: 300px;
+    }
+
+    .projects-card-target{
+        width: 300px;
+    }
+
+    .projects-card-title{
+        font-size: 25px;
+        width: 260px;
+    }
+
+    .projects-card-logo{
+        height: 60px;
+    }
+
+    .projects-card-text{
+        margin-inline: 20px;
+        width: 260px;
+        font-size: 13px;
+    }
+}

@@ -239,3 +239,21 @@
     text-align: center;
     font-size: 17px;
 }
+
+@media only screen and (max-width: 700px) {
+    .about-text{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .about-text{
+        line-height: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .social-media-card{
+        margin-block: 50px;
+    }
+}

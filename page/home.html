@@ -23,6 +23,7 @@
         });
         window.addEventListener('scroll', navigationScroll);
         window.addEventListener('scroll', scrollIndicatorFunction);
+        window.addEventListener('resize', navigationScroll);
     </script>
 </head>
 <body>
@@ -111,9 +112,7 @@
         <div class="about-home">
             <div id="about-anchor" class="about-anchor"></div>
             <div class="about-home-content">
-                <div class="about-home-image-frame">
-                    <img src="../resources/image/jpg/zertline-img-placeholder.jpg" alt="about image">
-                </div>
+                <div class="about-home-image"></div>
                 <div class="about-home-text">
                     <h1>What is ZertLine ?</h1>
                     <p>The ZertLine Projects website offers an immersive window into the world of ZertLine. Discover our ongoing projects, future plans, and the latest updates that define us. Through project-specific pages, news releases, and a wealth of information, we invite you to delve into the heart of our endeavors. Join us on a journey where innovation meets inspiration, all in one meticulously crafted digital space.</p>
@@ -131,8 +130,9 @@
                     <div id="pn-anchor-news" class="pn-anchor-news"></div>
                     <div class="pn-news pn-inside">
                         <h1 class="pn-title">News</h1>
+                        <svg class='pn-icon pn-icon-news pn-icon-news-mobile' viewBox='0 0 999.51 901.86' overflow='visible'><path d='M737.93,7.93L48.45,440.47c-39.01,24.47-57.13,71.8-44.44,116.07l30.56,106.56c12.69,44.27,53.14,74.81,99.2,74.89l81.43,.14v60.34c0,57.1,46.29,103.38,103.38,103.38h361.84c57.1,0,103.38-46.29,103.38-103.38v-59.33l163.89,.29c34.4,.06,59.26-32.87,49.78-65.94L815.09,37.47c-9.48-33.07-48.02-47.82-77.16-29.54Zm-83.36,816.39H344.42c-28.55,0-51.69-23.14-51.69-51.69v-34.35l413.53,.73v33.62c0,28.55-23.14,51.69-51.69,51.69Z'/></svg>
                         <p class="pn-text pn-text-news">Introducing the ZertLine News Page - your ultimate gateway to the latest and most noteworthy updates straight from the heart of our dynamic world. This innovative tool serves as a seamless bridge connecting you, our valued user, with the cutting-edge developments curated by ZertLine. From the source of the news to its upload date, the News Page is a remarkable resource designed to deliver information in the simplest and most user-friendly manner possible. Stay effortlessly connected with the pulse of ZertLine and experience the synergy between our team and you, as we bring you the latest updates with unparalleled ease and clarity.</p>
-                        <svg class='pn-icon pn-icon-news' viewBox='0 0 999.51 901.86' overflow='visible'><path d='M737.93,7.93L48.45,440.47c-39.01,24.47-57.13,71.8-44.44,116.07l30.56,106.56c12.69,44.27,53.14,74.81,99.2,74.89l81.43,.14v60.34c0,57.1,46.29,103.38,103.38,103.38h361.84c57.1,0,103.38-46.29,103.38-103.38v-59.33l163.89,.29c34.4,.06,59.26-32.87,49.78-65.94L815.09,37.47c-9.48-33.07-48.02-47.82-77.16-29.54Zm-83.36,816.39H344.42c-28.55,0-51.69-23.14-51.69-51.69v-34.35l413.53,.73v33.62c0,28.55-23.14,51.69-51.69,51.69Z'/></svg>
+                        <svg class='pn-icon pn-icon-news pn-icon-news-desktop' viewBox='0 0 999.51 901.86' overflow='visible'><path d='M737.93,7.93L48.45,440.47c-39.01,24.47-57.13,71.8-44.44,116.07l30.56,106.56c12.69,44.27,53.14,74.81,99.2,74.89l81.43,.14v60.34c0,57.1,46.29,103.38,103.38,103.38h361.84c57.1,0,103.38-46.29,103.38-103.38v-59.33l163.89,.29c34.4,.06,59.26-32.87,49.78-65.94L815.09,37.47c-9.48-33.07-48.02-47.82-77.16-29.54Zm-83.36,816.39H344.42c-28.55,0-51.69-23.14-51.69-51.69v-34.35l413.53,.73v33.62c0,28.55-23.14,51.69-51.69,51.69Z'/></svg>
                     </div>
                 </div>
                 <div class="pn-projects-holder">

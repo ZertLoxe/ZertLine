@@ -44,20 +44,25 @@
             <div class="text">
                 <p>Welcome to ZertLine Projects Website!</p>
             </div>
-            <div class="link">
+            <div class="link" id="link">
                 <a class="wait-animation" id="link-animation-onclick-text" href="javascript:setTimeout(()=>{window.location = 'page/home.html' },900);" onclick="linkAnimationOnclick(); linkClickedAnimation();">join</a>
                 <script>
                     function linkAnimationOnclick() {
                         document.getElementById("link-animation-onclick").style.animationPlayState = "running";
+                        document.getElementById("link-animation-onclick-holder").style.display = "block";
                         document.getElementById("link-animation-onclick-text").style.animationPlayState = "running";
                     }
                 </script>
-                <svg class="link-animation-onclick" id="link-animation-onclick">
-                    <circle cx="50" cy="50" r="40"/>  
-                </svg>
+                
+                
             </div>
         </div>
     </main>
+    <div class="link-animation-onclick-holder" id="link-animation-onclick-holder" style="display: none;">
+        <svg class="link-animation-onclick" id="link-animation-onclick">
+            <circle cx="50" cy="50" r="40"/>  
+        </svg>
+    </div>
     <div class="social-media-links">
         <a class="social-media-link discord-link" href="" target="_blank">
             <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1500">

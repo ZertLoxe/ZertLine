@@ -57,8 +57,7 @@ function navigationScroll() {
             getElement("nav-link-2").style.backgroundColor = "hsla(229, 89%, 4%, 0.75)";
             getElement("nav-link-3").style.backgroundColor = "hsla(229, 89%, 4%, 0.75)";
             getElement("nav-link-active").style.backgroundColor = "hsla(228, 90%, 16%, 0.75)";
-        }
-        else {
+        }else {
             getElement("header").style.background = "#010411";
             getElement("header").style.border = "0";
             getElement("header").style.boxShadow = "0px 0px 10px #010411";

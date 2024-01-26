@@ -1,4 +1,4 @@
-.projects-header{ 
+.projects-header {
     padding-block: 25px;
     font-size: 50px;
     font-family: roboto;
@@ -9,13 +9,13 @@
     border-bottom: #fbedb2 solid 5px;
 }
 
-.projects-card-holder{
+.projects-card-holder {
     width: 100%;
     text-align: center;
     margin-block: 2%;
 }
 
-.projects-card{
+.projects-card {
     display: inline-block;
     position: relative;
     width: 400px;
@@ -26,27 +26,27 @@
     overflow: hidden;
 }
 
-.projects-card:hover .projects-card-title-logo{
+.projects-card:hover .projects-card-title-logo {
     top: -50%;
     transition: 0.4s;
     transition-delay: 0.3s;
     transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
-.projects-card:hover .projects-card-text{
+.projects-card:hover .projects-card-text {
     top: 50%;
     transition: 0.4s;
     transition-delay: 0.3s;
     transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
-.projects-card-target{
+.projects-card-target {
     text-decoration: none;
     width: 400px;
     aspect-ratio: 4 / 3;
 }
 
-.projects-card-title-logo{
+.projects-card-title-logo {
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
@@ -56,18 +56,18 @@
     transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
-.projects-card-logo{
+.projects-card-logo {
     fill: #fbedb2;
     height: 60px;
 }
 
-.projects-card-title{
+.projects-card-title {
     font-size: 50px;
     font-family: roboto;
     width: 360px;
 }
 
-.projects-card-text{
+.projects-card-text {
     position: absolute;
     font-family: noto;
     font-weight: 600;
@@ -80,7 +80,7 @@
     transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
-.projects-card-banner{
+.projects-card-banner {
     position: absolute;
     top: 0;
     opacity: 0.5;
@@ -90,35 +90,34 @@
     transition: 1s;
 }
 
-.projects-card:hover .projects-card-banner{
+.projects-card:hover .projects-card-banner {
     transform: scale(2);
     transition: 1s;
 }
 
-main{
-    /* height: 1000px; */
+main {
     background-color: blueviolet;
 }
 
 @media only screen and (max-width: 440px) {
-    .projects-card{
+    .projects-card {
         width: 300px;
     }
 
-    .projects-card-target{
+    .projects-card-target {
         width: 300px;
     }
 
-    .projects-card-title{
+    .projects-card-title {
         font-size: 25px;
         width: 260px;
     }
 
-    .projects-card-logo{
+    .projects-card-logo {
         height: 60px;
     }
 
-    .projects-card-text{
+    .projects-card-text {
         margin-inline: 20px;
         width: 260px;
         font-size: 13px;

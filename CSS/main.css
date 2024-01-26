@@ -1,55 +1,55 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     color: #fefbee;
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 1em;
     background-color: #010411;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: #04124d;
     border-radius: 20px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: hsla(229, 89%, 54%, 0.5);
     border-radius: 20px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background-color: hsla(229, 89%, 54%, 1);
 }
 
-::selection{
+::selection {
     color: #010411;
     background-color: #fefbee;
 }
 
-body{
+body {
     background-color: #010411;
     overflow-x: hidden;
 }
 
-@font-face{
+@font-face {
     font-family: noto;
     src: url(../resources/font/NotoSans-Light.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: remond;
     src: url(../resources/font/Remond-Regular.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: roboto;
     src: url(../resources/font/RobotoCondensed-Bold.ttf);
 }
 
-.preloading-animation{
+.preloading-animation {
     position: fixed;
     top: 0;
     width: 100%;
@@ -64,18 +64,19 @@ body{
     animation-play-state: paused;
 }
 
-@keyframes preloading-animation{
-    0%{
+@keyframes preloading-animation {
+    0% {
         visibility: hidden;
         opacity: 0;
     }
-    100%{
+
+    100% {
         visibility: visible;
         opacity: 1;
     }
 }
 
-header{
+header {
     background-color: #010411;
     font-family: remond;
     width: 100%;
@@ -88,7 +89,7 @@ header{
     transition: 0.2s;
 }
 
-.scroll-indicator-bar{
+.scroll-indicator-bar {
     content: "";
     position: absolute;
     bottom: -6px;
@@ -100,11 +101,12 @@ header{
     transform: scaleX(1.0015);
 }
 
-.main-logo,.nav-links{
+.main-logo,
+.nav-links {
     display: flex;
 }
 
-.main-logo{
+.main-logo {
     background-color: hsla(229, 89%, 4%, 0.75);
     float: left;
     margin-left: 5%;
@@ -117,16 +119,16 @@ header{
     min-width: 250px;
 }
 
-.logo{
+.logo {
     height: 55px;
     margin-right: 10px;
 }
 
-.logo-icon{
+.logo-icon {
     fill: #fefbee;
 }
 
-.text-logo{
+.text-logo {
     font-size: 20px;
     margin-top: 10px;
     margin-left: 5px;
@@ -134,79 +136,83 @@ header{
     transition: 1s;
 }
 
-.nav-links{
+.nav-links {
     float: right;
     margin-right: 5%;
 }
 
-.nav-link,.nav-link-active{
+.nav-link,
+.nav-link-active {
     font-family: roboto;
     height: 24px;
     overflow: hidden;
 }
 
-.nav-link{
+.nav-link {
     background-color: hsla(229, 89%, 4%, 1);
     transition: background-color 0.2s;
     padding-block: 30.5px;
     transition: 0.3s;
 }
 
-.nav-link a:nth-child(1){
+.nav-link a:nth-child(1) {
     transition: color 0.2s;
     padding-inline: 10px;
     padding-block: 30.5px;
 }
 
-.nav-link:hover a:nth-child(1){
+.nav-link:hover a:nth-child(1) {
     color: #010411;
     transition: 0.2s;
 }
 
-.nav-link:active a:nth-child(1){
+.nav-link:active a:nth-child(1) {
     color: #04124d;
     transition: 0.1s;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     background-color: #fefbee !important;
     transition: 0.2s !important;
 }
 
-.nav-link-active{
+.nav-link-active {
     background-color: hsla(228, 90%, 16%, 1);
     transition: background-color 0.2s;
     padding-block: 30.5px;
     transition: 0.3s;
 }
 
-.nav-link-active a:nth-child(1){
+.nav-link-active a:nth-child(1) {
     color: #2148f2;
     transition: color 0.2s;
     padding-inline: 10px;
     padding-block: 30.5px;
 }
 
-.nav-link-active:hover a:nth-child(1){
+.nav-link-active:hover a:nth-child(1) {
     color: #d4af0c;
     transition: 0.2s;
 }
 
-.nav-link-active:hover{
+.nav-link-active:hover {
     background-color: #fefbee !important;
     transition: 0.2s !important;
 }
 
-.nav-link a:nth-child(1),.nav-link-active a:nth-child(1){
+.nav-link a:nth-child(1),
+.nav-link-active a:nth-child(1) {
     text-decoration: none;
     font-size: 20px;
 }
 
-.nav-link a:nth-child(2),.nav-link-active a:nth-child(2){
+.nav-link a:nth-child(2),
+.nav-link-active a:nth-child(2) {
     padding: 100px;
 }
 
-.nav-link svg,.nav-link-active svg{
+.nav-link svg,
+.nav-link-active svg {
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -218,7 +224,8 @@ header{
     padding-bottom: 30.5px;
 }
 
-.nav-link div,.nav-link-active div{
+.nav-link div,
+.nav-link-active div {
     position: relative;
     top: 0px;
     transition: 0.5s;
@@ -228,82 +235,89 @@ header{
     animation-timing-function: ease-in-out;
 }
 
-.nav-link:hover div,.nav-link-active:hover div{
+.nav-link:hover div,
+.nav-link-active:hover div {
     transform: translateY(-58px);
     transition: 0.5s;
     transition-delay: 0.7s;
 }
 
-.nav-links:hover div{
+.nav-links:hover div {
     animation: none;
 }
 
-.nav-link-animation-1{
+.nav-link-animation-1 {
     animation-delay: 0.25s;
 }
 
-.nav-link-animation-2{
+.nav-link-animation-2 {
     animation-delay: 0.5s;
 }
 
-.nav-link-animation-3{
+.nav-link-animation-3 {
     animation-delay: 0.75s;
 }
 
-@keyframes nav-link{
-    0%,68%{
+@keyframes nav-link {
+
+    0%,
+    68% {
         top: 0px;
     }
-    70%,98%{
+
+    70%,
+    98% {
         top: -58px;
     }
-    100%{
+
+    100% {
         top: 0px;
     }
 }
 
-.nav-link svg{
+.nav-link svg {
     fill: #fefbee;
     transition: 0.2s;
 }
 
-.nav-link:hover svg{
+.nav-link:hover svg {
     fill: #010411;
     transition: 0.2s;
 }
 
-.nav-link:active svg{
+.nav-link:active svg {
     fill: #04124d;
     transition: 0.1s;
 }
 
-.nav-link-active svg{
+.nav-link-active svg {
     fill: #2148f2;
     transition: 0.2s;
 }
 
-.nav-link-active:hover svg{
+.nav-link-active:hover svg {
     fill: #d4af0c;
     transition: 0.2s;
 }
 
-.nav-links-button{
+.nav-links-button {
     z-index: 6;
     position: absolute;
     display: none;
 }
 
-footer{
+footer {
     background-color: #010411;
     width: 100%;
     height: 70px;
 }
 
-.footer-text,.social-media-links{
+.footer-text,
+.social-media-links {
     display: flex;
 }
 
-.footer-text{
+.footer-text {
     float: right;
     font-family: noto;
     margin-right: 15px;
@@ -312,44 +326,47 @@ footer{
     cursor: default;
 }
 
-.social-media-links{
+.social-media-links {
     float: left;
     margin-left: 20px;
 }
 
-.social-media-icon{
+.social-media-icon {
     height: 30px;
     margin-top: 20px;
     margin-left: 3px;
     margin-right: 3px;
 }
 
-.discord-icon,.youtube-icon,.reddit-icon,.x-icon{
+.discord-icon,
+.youtube-icon,
+.reddit-icon,
+.x-icon {
     fill: color-mix(in srgb, #010411, #fefbee);
 }
 
-.social-media-icon:hover .discord-icon{
+.social-media-icon:hover .discord-icon {
     fill: #5865F2;
 }
 
-.social-media-icon:hover .youtube-icon{
+.social-media-icon:hover .youtube-icon {
     fill: #ff0000;
 }
 
-.social-media-icon:hover .reddit-icon{
+.social-media-icon:hover .reddit-icon {
     fill: #ff5700;
 }
 
-.social-media-icon:hover .x-icon{
+.social-media-icon:hover .x-icon {
     fill: #ffffff;
 }
 
 @media only screen and (max-width: 740px) {
-    header{
+    header {
         background-color: #010411;
     }
 
-    .main-logo{
+    .main-logo {
         background-color: hsla(229, 89%, 4%, 0.75);
         margin-left: 5%;
         height: 70px;
@@ -359,11 +376,11 @@ footer{
         display: block;
     }
 
-    .text-logo{
+    .text-logo {
         display: none;
     }
-    
-    .nav-links{
+
+    .nav-links {
         display: block;
         position: absolute;
         text-align: center;
@@ -376,11 +393,12 @@ footer{
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
         backdrop-filter: blur(10px);
         border-radius: 20px;
-        border:1px solid rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.18);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     }
 
-    .nav-link,.nav-link-active{
+    .nav-link,
+    .nav-link-active {
         width: 40vw;
         display: inline-block;
         text-align: center;
@@ -389,16 +407,18 @@ footer{
         border: 5px solid #fefbee;
     }
 
-    .nav-link a:nth-child(1),.nav-link-active a:nth-child(1){
+    .nav-link a:nth-child(1),
+    .nav-link-active a:nth-child(1) {
         padding-inline: 10vw;
         width: 10vw;
     }
 
-    .nav-link svg,.nav-link-active svg{
+    .nav-link svg,
+    .nav-link-active svg {
         padding-inline: 20vw;
     }
 
-    .nav-links-button{
+    .nav-links-button {
         display: block;
         background: transparent;
         margin-top: 15px;
@@ -409,12 +429,12 @@ footer{
         height: 60px;
     }
 
-    .nav-links-button-icon{
+    .nav-links-button-icon {
         width: 40px;
         fill: #fefbee;
     }
 
-    .scroll-indicator-bar{
+    .scroll-indicator-bar {
         display: none;
     }
 }

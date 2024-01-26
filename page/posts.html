@@ -14,14 +14,15 @@
 
     <link rel="stylesheet" href="../CSS/main.css">
 
-    <link rel="stylesheet" href="../CSS/sub/home.css">
+    <link rel="stylesheet" href="../CSS/sub/posts.css">
 
     <script src="../JS/main.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.36/moment-timezone-with-data-10-year-range.min.js"></script>
+
     <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", (event) => {
-            linkLoadAnimation();
-        });
         window.addEventListener('scroll', navigationScroll);
         window.addEventListener('scroll', scrollIndicatorFunction);
         window.addEventListener('resize', navigationScroll);
@@ -29,18 +30,16 @@
 </head>
 
 <body>
-
-    <div class="preloading-animation" id="preloading-animation"></div>
     <header id="header">
         <div class="main-logo" id="main-logo">
-            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1216.05 600">
-                <path class="logo-icon" shape-rendering="geometricPrecision"
-                    d="M1216.01,364.75c-2.31,132.22-111.36,237.52-243.57,235.22-132.22-2.31-120.66-37.6-299.56-95.18,144.82,4.48,180.22,70.49,299.95,72.58,119.73,2.09,218.49-93.28,220.58-213.01s-93.28-218.49-213.01-220.58c-48.46-.85-83.66-3.93-324.14,42.48-113.65,21.94-325.48,13.95-491.19-62.42C100.03,93.87,42.1,53.36,0,0,278.55,142.95,389.11,159.91,546.55,162.66c109.9,1.92,287.69-44.05,434.25-41.49,132.22,2.31,237.52,111.36,235.22,243.57Z
-                    M59.96,166.19c165.3,61.26,328.06,114.5,537.36,106.71,78.35-2.92,154.26-22.13,175.34-28.93,26.65-8.6,90.75-29.78,127.37-35,90.42,6.81,122.51,25.28,122.51,25.28,0,0-94.87,11.99-160.99,24.96-66.12,12.96-104.45,33.87-202.66,42.86-198.24,18.16-436.57-13.37-436.57-13.37,0,0-138.43-93.08-162.38-122.51Z
-                    M586.71,356.03c59.8-5.83,182.31-16.69,215.26-15.7,25.3,5.86,48.91,15.69,71.33,26.63-28.44,9.48-33.99,10.71-65.63,17.5-40.87-.9-162.62-10.21-220.96-28.44Z
-                    M184.91,350.93s101.36,33.54,180.12,48.13c78.76,14.58,232.63,17.5,274.19,16.77s105.74,4.1,169.91,19.69c64.17,15.59,180.12,43.75,180.12,43.75,0,0-63.44,11.67-84.59,11.67s-163.34-40.71-253.04-43.02c-294.86-7.62-310.17,11.48-387.95-33.54-27.71-16.04-78.76-63.44-78.76-63.44Z
-                    M1039.81,401.61c.37-.74,6.26-19.26,.91-31.48,2.25,14.95-2.73,27.67-4.02,29.8-31.13-17.33-100.06-70.25-137.88-108.07-3.16,64.54,37.89,119.03,50.32,129.07,19.04-.74,65.6-10.67,88.32-18.8,0,0-65.79,5.67-83.29,3.57-6.16-8.59-37.43-49.3-42.78-90.26,26.82,29.66,90.63,82.89,128.43,86.17Z
-                    M1066.95,397.28c7.37-1.01,59.76-36.5,96.58-83.9-7.29,43.02-35,78.76-49.34,94.92-17.26-1.34-25.12-6.73-45.7-10.94,9.83,7.8,20.66,14.67,49.83,19.85,16.04-9.89,62.23-73.09,55.26-132.56-23.92,30.26-69.3,75.66-104.25,110.27-1.51-2.97-6.13-5.34-5.59-26-2.63,16.33,1.22,25.95,3.21,28.36Z" />
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2554.58 1260.43">
+                <path class="logo-icon"
+                    d="M2554.51,766.23c-4.85,277.75-233.93,498.97-511.68,494.13-277.75-4.85-253.47-78.99-629.29-199.95,304.22,9.4,378.59,148.08,630.12,152.47s458.98-195.95,463.37-447.47c4.39-251.52-195.95-458.98-447.47-463.37-101.79-1.78-175.74-8.26-680.93,89.24-238.75,46.08-683.75,29.3-1031.85-131.13C210.14,197.19,88.45,112.1,0,0,585.15,300.3,817.41,335.93,1148.15,341.7c230.87,4.03,604.36-92.53,912.23-87.15,277.75,4.85,498.97,233.93,494.13,511.68Z
+                    M125.97,349.12c347.23,128.68,313.06,118.89,563.74,171.57,254.61,53.51,414.01,58.22,565.11,52.6,164.6-6.13,324.06-46.48,368.34-60.77,55.98-18.06,190.63-62.55,267.57-73.53,189.96,14.3,257.36,53.11,257.36,53.11,0,0-199.3,25.19-338.19,52.43-138.89,27.23-219.42,71.15-425.72,90.04-206.3,18.89-234.89,5.92-420.77,8.68-185.87,2.76-496.34-36.77-496.34-36.77,0,0-290.8-195.55-341.11-257.36Z
+                    M1232.52,747.93c125.62-12.26,382.98-35.07,452.19-32.97,53.15,12.31,102.74,32.96,149.85,55.95-59.74,19.91-71.4,22.51-137.87,36.77-85.85-1.9-341.62-21.45-464.17-59.74Z
+                    M388.44,737.2s212.94,70.47,378.38,101.11c165.45,30.64,488.68,36.77,576,35.23s222.13,8.61,356.94,41.36c134.81,32.75,378.38,91.91,378.38,91.91,0,0-133.28,24.51-177.7,24.51s-343.13-85.51-531.57-90.38c-188.45-4.87-338.55-12.26-451.91-1.53-280.34-3.06-304.85-35.23-363.06-68.94-58.21-33.7-165.45-133.28-165.45-133.28Z
+                    M2184.35,843.67c.79-1.55,13.15-40.47,1.91-66.13,4.72,31.4-5.74,58.13-8.44,62.61-65.4-36.41-210.19-147.58-289.64-227.03-6.64,135.57,79.59,250.06,105.7,271.15,40.01-1.55,137.8-22.42,185.53-39.49,0,0-138.21,11.91-174.98,7.49-12.94-18.04-78.64-103.57-89.87-189.62,56.34,62.3,190.38,174.13,269.79,181.02Z
+                    M2241.37,834.57c15.49-2.13,125.53-76.68,202.89-176.26-15.32,90.38-73.53,165.45-103.66,199.4-36.26-2.81-52.77-14.13-96-22.98,20.66,16.38,43.4,30.81,104.68,41.7,33.7-20.77,130.72-153.53,116.09-278.47-50.25,63.57-145.57,158.94-219,231.64-3.17-6.24-12.89-11.22-11.74-54.62-5.53,34.3,2.57,54.51,6.74,59.57Z" />
             </svg>
             <h4 class="text-logo">ZertLine Projects</h4>
         </div>
@@ -54,7 +53,7 @@
                 </svg>
             </button>
             <div class="nav-links" id="nav-links">
-                <div class="nav-link-active" id="nav-link-active">
+                <div class="nav-link" id="nav-link-0">
                     <div>
                         <a href="home.html">Home</a><br>
                         <a href="home.html">
@@ -104,119 +103,16 @@
     </header>
 
     <main>
-        <div class="first-display">
-            <img src="../resources/image/webp/bg-img.webp" alt="bg-img">
-            <div>
-                <h1>Unlimit Your Imagination</h1>
-                <p>keep your imagination limitless as it is the beginning of creation.</p>
-            </div>
-            <a href="#about-anchor">
-                <svg class="about-anchor-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 917.16 596.46">
-                    <path
-                        d="M850.02,29.29l37.85,37.85c39.05,39.05,39.05,102.37,0,141.42l-358.61,358.61c-39.05,39.05-102.37,39.05-141.42,0L29.29,208.63c-39.05-39.05-39.05-102.37,0-141.42L67.17,29.32c39.05-39.05,102.37-39.05,141.42,0l214.63,214.63c19.53,19.53,51.18,19.53,70.71,0L708.6,29.29c39.05-39.05,102.37-39.05,141.42,0Z" />
-                </svg>
-            </a>
-        </div>
-        <div class="about-home">
-            <div id="about-anchor" class="about-anchor"></div>
-            <div class="about-home-content">
-                <div class="about-home-image"></div>
-                <div class="about-home-text">
-                    <h1>What is ZertLine ?</h1>
-                    <p>The ZertLine Projects website offers an immersive window into the world of ZertLine. Discover our
-                        ongoing projects, future plans, and the latest updates that define us. Through project-specific
-                        pages, news releases, and a wealth of information, we invite you to delve into the heart of our
-                        endeavors. Join us on a journey where innovation meets inspiration, all in one meticulously
-                        crafted digital space.</p>
+        <div id="posts-header">Posts</div>
+        <div class="posts-data-holder">
+            <div id="posts-data">
+                <div id="posts-footer">
+                    <p>That's all we have ._.</p>
                 </div>
             </div>
         </div>
-        <div class="projects-and-news">
-            <div class="pn-content">
-                <div class="pn-news-holder">
-                    <a id="pn-anchor-news-link" class="pn-anchor-news-link" href="#pn-anchor-news" tabindex="0">
-                        <svg class="pn-anchor-news-link-icon" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 917.16 596.46">
-                            <path
-                                d="M850.02,29.29l37.85,37.85c39.05,39.05,39.05,102.37,0,141.42l-358.61,358.61c-39.05,39.05-102.37,39.05-141.42,0L29.29,208.63c-39.05-39.05-39.05-102.37,0-141.42L67.17,29.32c39.05-39.05,102.37-39.05,141.42,0l214.63,214.63c19.53,19.53,51.18,19.53,70.71,0L708.6,29.29c39.05-39.05,102.37-39.05,141.42,0Z" />
-                        </svg>
-                    </a>
-                    <div id="pn-anchor-news" class="pn-anchor-news"></div>
-                    <div class="pn-news pn-inside">
-                        <h1 class="pn-title">News</h1>
-                        <svg class='pn-icon pn-icon-news pn-icon-news-mobile' viewBox='0 0 999.51 901.86'
-                            overflow='visible'>
-                            <path
-                                d='M737.93,7.93L48.45,440.47c-39.01,24.47-57.13,71.8-44.44,116.07l30.56,106.56c12.69,44.27,53.14,74.81,99.2,74.89l81.43,.14v60.34c0,57.1,46.29,103.38,103.38,103.38h361.84c57.1,0,103.38-46.29,103.38-103.38v-59.33l163.89,.29c34.4,.06,59.26-32.87,49.78-65.94L815.09,37.47c-9.48-33.07-48.02-47.82-77.16-29.54Zm-83.36,816.39H344.42c-28.55,0-51.69-23.14-51.69-51.69v-34.35l413.53,.73v33.62c0,28.55-23.14,51.69-51.69,51.69Z' />
-                        </svg>
-                        <p class="pn-text pn-text-news">Introducing the ZertLine News Page - your ultimate gateway to
-                            the latest and most noteworthy updates straight from the heart of our dynamic world. This
-                            innovative tool serves as a seamless bridge connecting you, our valued user, with the
-                            cutting-edge developments curated by ZertLine. From the source of the news to its upload
-                            date, the News Page is a remarkable resource designed to deliver information in the simplest
-                            and most user-friendly manner possible. Stay effortlessly connected with the pulse of
-                            ZertLine and experience the synergy between our team and you, as we bring you the latest
-                            updates with unparalleled ease and clarity.</p>
-                        <svg class='pn-icon pn-icon-news pn-icon-news-desktop' viewBox='0 0 999.51 901.86'
-                            overflow='visible'>
-                            <path
-                                d='M737.93,7.93L48.45,440.47c-39.01,24.47-57.13,71.8-44.44,116.07l30.56,106.56c12.69,44.27,53.14,74.81,99.2,74.89l81.43,.14v60.34c0,57.1,46.29,103.38,103.38,103.38h361.84c57.1,0,103.38-46.29,103.38-103.38v-59.33l163.89,.29c34.4,.06,59.26-32.87,49.78-65.94L815.09,37.47c-9.48-33.07-48.02-47.82-77.16-29.54Zm-83.36,816.39H344.42c-28.55,0-51.69-23.14-51.69-51.69v-34.35l413.53,.73v33.62c0,28.55-23.14,51.69-51.69,51.69Z' />
-                        </svg>
-                    </div>
-                </div>
-                <div class="pn-projects-holder">
-                    <a id="pn-anchor-projects-link" class="pn-anchor-projects-link" href="#pn-anchor-projects">
-                        <svg class="pn-anchor-projects-link-icon" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 917.16 596.46">
-                            <path
-                                d="M850.02,29.29l37.85,37.85c39.05,39.05,39.05,102.37,0,141.42l-358.61,358.61c-39.05,39.05-102.37,39.05-141.42,0L29.29,208.63c-39.05-39.05-39.05-102.37,0-141.42L67.17,29.32c39.05-39.05,102.37-39.05,141.42,0l214.63,214.63c19.53,19.53,51.18,19.53,70.71,0L708.6,29.29c39.05-39.05,102.37-39.05,141.42,0Z" />
-                        </svg>
-                    </a>
-                    <div id="pn-anchor-projects" class="pn-anchor-projects"></div>
-                    <div class="pn-projects pn-inside">
-                        <h1 class="pn-title">Projects</h1>
-                        <svg class='pn-icon pn-icon-projects' viewBox='0 0 1000 956.59' overflow='visible'>
-                            <path
-                                d='M500,819.71l-247.79,130.27c-41.44,21.79-89.87-13.4-81.95-59.54l47.32-275.91L17.12,419.12c-33.52-32.68-15.03-89.61,31.3-96.34l277.03-40.26L449.35,31.49c20.72-41.98,80.58-41.98,101.3,0l123.89,251.03,277.03,40.26c46.33,6.73,64.83,63.67,31.3,96.34l-200.46,195.4,47.32,275.91c7.91,46.14-40.52,81.33-81.95,59.54l-247.79-130.27Z' />
-                        </svg>
-                        <p class="pn-text pn-text-projects">Explore the heart of ZertLine through our Projects Page -
-                            your comprehensive window into the very essence of our endeavors. This dedicated platform
-                            consolidates all our projects into a single, easily navigable space, offering you a holistic
-                            view of the intricate details and components associated with each venture. The Projects Page
-                            stands as a pivotal cornerstone for ZertLine, underscoring our unwavering commitment to
-                            prioritizing and maintaining the utmost relevance of our projects. It serves as a testament
-                            to our dedication, ensuring that you can seamlessly delve into every facet and evolution of
-                            our initiatives. Explore the heart of ZertLine through our Projects Page, where transparency
-                            and currency converge to provide you with an immersive experience into our ongoing and
-                            completed endeavors.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <script src="../JS/posts.js"></script>
     </main>
-    <script>
-        function pnAnchorProjectsGoBackCall() {
-            document.getElementById('pn-anchor-projects').style.transform = 'translateY(0px)';
-        }
-        let pnAnchorProjectsGoBack = false;
-        window.addEventListener('popstate', function () {
-            if (window.location.hash === '#pn-anchor-news') {
-                document.getElementById('pn-anchor-projects').style.transform = 'translateY(calc((100vh - 85px)/-3))';
-                pnAnchorProjectsGoBack = true;
-            }
-            if (window.location.hash === '#pn-anchor-projects') {
-                if (pnAnchorProjectsGoBack) {
-                    setTimeout(pnAnchorProjectsGoBackCall, 300);
-                    pnAnchorProjectsGoBack = false;
-                }
-            }
-        });
-        document.addEventListener("DOMContentLoaded", (event) => {
-            if (window.location.hash === '#pn-anchor-news') {
-                document.getElementById('pn-anchor-projects').style.transform = 'translateY(calc((100vh - 85px)/-3))';
-            }
-        });
-    </script>
 
     <footer>
         <div class="social-media-links">

@@ -1,0 +1,194 @@
+.posts-data-holder {
+    background-image: url(../../resources/image/svg/main-pattern.svg);
+    background-position: center;
+    background-size: 35%;
+    padding-block: 40px;
+    padding-inline: 20px;
+    width: calc(100% - 40px);
+    min-height: 100vh;
+}
+
+#posts-data {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    animation-duration: 1s;
+    padding-inline: 25px;
+    padding-block: 20px;
+}
+
+#posts-header {
+    padding-block: 25px;
+    font-size: 50px;
+    font-family: roboto;
+    background-color:#292e44;
+    width: 100%;
+    text-align: center;
+    color: #fefbee;
+    border-bottom: #fbedb2 solid 5px;
+}
+
+hr{
+    margin-inline: 20px;
+    border-color: #292e44;
+    border-style: outset;
+}
+
+#post-element-part{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#post-element-part-AG #post-element-media-holder{
+    flex-wrap: nowrap;
+}
+
+#post-element-part-AG #post-element-image,#post-element-part-AG #post-element-video{
+    margin-inline: 25%;
+}
+
+#post-element-part-LM,#post-element-part-RM{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    text-align: center;
+}
+
+#post-element-part-LM #post-element-image,#post-element-part-RM #post-element-image{
+    width: 50vw;
+    padding-inline: 1%;
+}
+
+#post-element-part-LM #post-element-video,#post-element-part-RM #post-element-video{
+    width: 50vw;
+    padding-inline: 1%;
+}
+
+#post-element-part-LM #post-element-media-holder,#post-element-part-RM #post-element-media-holder{
+    background-color: transparent;
+    width: auto;
+}
+
+#post-element-part-LM #post-element-title-text-holder,#post-element-part-RM #post-element-title-text-holder{
+    width: 50vw;
+    padding-inline: 1%;
+}
+
+#post-element-part-LM #post-element-text-holder,#post-element-part-RM #post-element-text-holder{
+    line-height: 1.8;
+}
+
+#AG-arrow-left ,#AG-arrow-right{
+    fill: #fefbee;
+    width: 50px;
+}
+
+.AG-arrow-left-button ,.AG-arrow-right-button{
+    width: 50px;
+    position: absolute;
+    z-index: 5;
+}
+
+.AG-arrow-left-button{
+    left: 0;
+    padding: 20px;
+}
+
+.AG-arrow-right-button{
+    right: 0;
+    padding: 20px;
+}
+
+#post-element-part-AG #post-element-media-holder{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: hsla(229, 89%, 4%, 0.5);
+    width: calc(100% - 20px);
+    border-radius: 10px;
+}
+
+#post-element-part #post-element-media-holder,#post-element-part-RM #post-element-media-holder,#post-element-part-LM #post-element-media-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: hsla(229, 89%, 4%, 0.5);
+    width: calc(100% - 20px);
+    border-radius: 10px;
+}
+
+#post-element-text-holder p{
+    margin-block: 10px;
+    font-family: noto;
+    color: #fefbee;
+}
+
+#post-element-title-holder p{
+    font-family: roboto;
+    font-size: 50px;
+    color: #fbedb2;
+}
+
+#post-element-image{
+    margin-block: 5px;
+    display: inline-block;
+    width: 50%;
+}
+
+#post-element-video{
+    margin-block: 5px;
+    display: inline-block;
+    aspect-ratio: 16 / 9;
+    width: 50%;
+    min-width: 50%;
+}
+
+.AG-post-element-media-holder-slider{
+    width: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.AG-post-element-media-holder-slider .media-item{
+    display: block !important;
+    box-sizing: border-box;
+}
+
+#post-time{
+    background-color: hsla(49, 89%, 96%, 0.5);
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#release-time{
+    font-family: remond;
+    padding: 5px;
+    color: #fefbee;
+}
+
+#edit-time{
+    font-family: remond;
+    padding: 5px;
+    color: #fefbee;
+}
+
+#posts-footer {
+    text-align: center;
+    font-family: noto;
+    padding-block: 10px;
+}
+
+main {
+    background: linear-gradient(45deg, rgba(4, 18, 77, 0.5) 0%, rgba(33, 72, 242, 0.5) 100%);
+}

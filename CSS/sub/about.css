@@ -1,4 +1,4 @@
-.about-title{
+.about-title {
     background-color: #2148f2;
     font-family: roboto;
     font-size: 50px;
@@ -10,17 +10,17 @@
     transition-timing-function: ease-in-out;
 }
 
-.about-title:hover{
+.about-title:hover {
     padding-right: calc(100% - 200px);
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
 
-.about-title-holder{
+.about-title-holder {
     background-color: #04124d;
 }
 
-.about-text{
+.about-text {
     background-color: #fefbee;
     color: #010411;
     padding-block: 30px;
@@ -32,12 +32,12 @@
     font-weight: 900;
 }
 
-.about-text::selection{
+.about-text::selection {
     background-color: #010411;
     color: #fefbee;
 }
 
-.about-text-decoration{
+.about-text-decoration {
     fill: none;
     stroke: #2148f2;
     position: absolute;
@@ -45,33 +45,33 @@
     stroke-width: 80px;
 }
 
-.about-text-decoration-tl{
+.about-text-decoration-tl {
     right: 0;
     bottom: 0;
 }
 
-.about-text-decoration-tr{
+.about-text-decoration-tr {
     left: 0;
     bottom: 0;
 }
 
-.about-text-decoration-br{
+.about-text-decoration-br {
     left: 0;
 }
 
-.about-text-decoration-bl{
+.about-text-decoration-bl {
     right: 0;
 }
 
-.about-text-decoration-holder{
+.about-text-decoration-holder {
     position: relative;
 }
 
-.social-media-display{
+.social-media-display {
     background-image: url(../../resources/image/webp/bg-img.webp);
 }
 
-.social-media-title{
+.social-media-title {
     position: relative;
     text-align: center;
     font-family: remond;
@@ -80,12 +80,12 @@
     background-color: hsla(229, 89%, 4%, 0.75);
 }
 
-.social-media-card-deck{
+.social-media-card-deck {
     text-align: center;
     background-color: hsla(49, 89%, 96%, 0.75);
 }
 
-.social-media-card{
+.social-media-card {
     display: inline-block;
     background-color: #010411;
     margin-block: 150px;
@@ -94,7 +94,7 @@
     border: #fbedb2 solid 10px;
 }
 
-.social-media-card h1{
+.social-media-card h1 {
     display: block;
     font-family: remond;
     margin-top: 200px;
@@ -104,7 +104,7 @@
     background-color: #2148f2;
 }
 
-.social-media-card p{
+.social-media-card p {
     display: block;
     font-family: noto;
     height: 50px;
@@ -114,7 +114,7 @@
     padding-inline: 10px;
 }
 
-.social-media-card a{
+.social-media-card a {
     display: block;
     font-family: roboto;
     text-decoration: none;
@@ -129,15 +129,15 @@
     transition: 0.2s;
 }
 
-.social-media-card a:hover{
+.social-media-card a:hover {
     color: #fefbee;
 }
 
-.social-media-card-link{
+.social-media-card-link {
     background-color: #fefbee;
 }
 
-.social-media-card a::after{
+.social-media-card a::after {
     content: "";
     width: 100%;
     height: 5px;
@@ -149,32 +149,32 @@
     transition: 0.2s;
 }
 
-.social-media-card a:hover::after{
+.social-media-card a:hover::after {
     height: 100%;
     transition: 0.2s;
 }
 
-.social-media-card-discord a:hover::after{
+.social-media-card-discord a:hover::after {
     background-color: #5865F2;
     transition: 0.1s;
 }
 
-.social-media-card-youtube a:hover::after{
+.social-media-card-youtube a:hover::after {
     background-color: #ff0000;
     transition: 0.1s;
 }
 
-.social-media-card-reddit a:hover::after{
+.social-media-card-reddit a:hover::after {
     background-color: #ff5700;
     transition: 0.1s;
 }
 
-.social-media-card-x a:hover::after{
+.social-media-card-x a:hover::after {
     background-color: #000000;
     transition: 0.1s;
 }
 
-.social-media-card-icon{
+.social-media-card-icon {
     width: 100px;
     fill: #04124d;
     fill-rule: evenodd;
@@ -183,7 +183,7 @@
     transform: translateY(-50%);
 }
 
-.social-media-card-icon-holder{
+.social-media-card-icon-holder {
     height: 200px;
     width: 250px;
     background-color: #fefbee;
@@ -192,23 +192,23 @@
     transition: 0.5s;
 }
 
-.social-media-card-discord .social-media-card-icon{
+.social-media-card-discord .social-media-card-icon {
     fill: #5865F2;
 }
 
-.social-media-card-youtube .social-media-card-icon{
+.social-media-card-youtube .social-media-card-icon {
     fill: #ff0000;
 }
 
-.social-media-card-reddit .social-media-card-icon{
+.social-media-card-reddit .social-media-card-icon {
     fill: #ff5700;
 }
 
-.social-media-card-x .social-media-card-icon{
+.social-media-card-x .social-media-card-icon {
     fill: #000000;
 }
 
-.credit-title{
+.credit-title {
     background-color: #2148f2;
     font-family: roboto;
     font-size: 50px;
@@ -220,17 +220,17 @@
     transition-timing-function: ease-in-out;
 }
 
-.credit-title:hover{
+.credit-title:hover {
     padding-right: calc(100% - 200px);
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
 
-.credit-title-holder{
+.credit-title-holder {
     background-color: #04124d;
 }
 
-.credit-text{
+.credit-text {
     background-color: #fefbee;
     color: #010411;
     padding-block: 30px;
@@ -241,19 +241,19 @@
 }
 
 @media only screen and (max-width: 700px) {
-    .about-text{
+    .about-text {
         font-size: 15px;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    .about-text{
+    .about-text {
         line-height: 2.5em;
     }
 }
 
 @media only screen and (max-width: 1000px) {
-    .social-media-card{
+    .social-media-card {
         margin-block: 50px;
     }
 }

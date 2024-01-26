@@ -1,16 +1,16 @@
-#news-data{
+#news-data {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     animation-duration: 1s;
     padding-inline: 25px;
     padding-block: 20px;
 }
 
-#news-icon{
+#news-icon {
     width: 40px;
     height: 40px;
     position: relative;
@@ -19,48 +19,48 @@
     border-radius: 5px;
 }
 
-#news-icon-new{
+#news-icon-new {
     fill: #d4af0c;
 }
 
-#news-icon-discord{
+#news-icon-discord {
     fill: #5865F2;
 }
 
-#news-icon-youtube{
+#news-icon-youtube {
     fill: #ff0000;
 }
 
-#news-icon-reddit{
+#news-icon-reddit {
     fill: #ff5700;
     fill-rule: evenodd;
 }
 
-#news-icon-x{
+#news-icon-x {
     fill: #000000;
 }
 
-#news-icon-projects{
+#news-icon-projects {
     fill: #0bc181;
 }
 
-#news-icon-announcement{
+#news-icon-announcement {
     fill: #6321f2;
 }
 
-#news-source{
+#news-source {
     font-family: roboto;
     color: #fefbee;
     margin-left: 10px;
 }
 
-#news-source-icon{
+#news-source-icon {
     display: flex;
     align-items: center;
     margin-block: 15px;
 }
 
-#news-time{
+#news-time {
     font-family: remond;
     font-size: 15px;
     margin-left: 20px;
@@ -70,13 +70,13 @@
     border-radius: 5px;
 }
 
-#news-title{
+#news-title {
     font-family: remond;
     color: #fbedb2;
     padding-bottom: 10px;
 }
 
-#news-content{
+#news-content {
     font-family: remond;
     color: #fefbee;
     margin-left: 20px;
@@ -84,7 +84,7 @@
     margin-bottom: 5px;
 }
 
-#news-media-holder{
+#news-media-holder {
     margin: 30px;
     /* background-color: #ff0000; */
     overflow-x: auto;
@@ -120,18 +120,18 @@
     background: transparent;
 }
 
-#news-media{
+#news-media {
     height: 200px;
     margin: 20px;
 }
 
-#news-link{
+#news-link {
     font-family: noto;
     color: #d4af0c;
     margin-left: 10px;
 }
 
-#news-part{
+#news-part {
     position: relative;
     margin-block: 5px;
     margin-inline: 22px;
@@ -139,17 +139,17 @@
     padding-left: 30px;
 }
 
-#news-part::before{
+#news-part::before {
     position: absolute;
     top: 0;
     left: -2px;
     height: 100%;
-    content:'';
+    content: '';
     border-left: 10px solid #fbedb2;
     border-radius: 10px;
 }
 
-.news-data-holder{   
+.news-data-holder {
     background-image: url(../../resources/image/svg/pattern.svg);
     background-position: center;
     background-size: 50%;
@@ -159,7 +159,7 @@
     min-height: 100vh;
 }
 
-.news-header{ 
+.news-header {
     padding-block: 25px;
     font-size: 50px;
     font-family: roboto;
@@ -170,45 +170,49 @@
     border-bottom: #fbedb2 solid 5px;
 }
 
-.news-footer{
+.news-footer {
     text-align: center;
     font-family: noto;
     padding-block: 10px;
 }
 
-main{
-    background: linear-gradient(45deg, rgba(4,18,77,0.5) 0%, rgba(33,72,242,0.5) 100%);
+main {
+    background: linear-gradient(45deg, rgba(4, 18, 77, 0.5) 0%, rgba(33, 72, 242, 0.5) 100%);
 }
 
 @media only screen and (max-width: 700px) {
-    #news-source-icon{
+    #news-source-icon {
         display: block;
         text-align: center;
     }
 
-    #news-part{
+    #news-part {
         text-align: center;
         padding-left: 0;
     }
 
-    #news-content,#news-link,#news-source,#news-media-holder,#news-time{
+    #news-content,
+    #news-link,
+    #news-source,
+    #news-media-holder,
+    #news-time {
         margin-left: 0;
     }
 
-    #news-part::before{
+    #news-part::before {
         display: none;
     }
 
-    #news-container{
+    #news-container {
         border-bottom: solid 1px #fefbee;
         padding-block: 30px;
     }
 
-    .news-data-holder{
+    .news-data-holder {
         background-size: 100%;
     }
 
-    #news-content{
+    #news-content {
         font-size: 13px;
         font-family: noto;
     }

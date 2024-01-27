@@ -35,7 +35,7 @@ fetch(directLink)
 
       if (news[i].media.length != 0) {
         for (let j = 0; j < news[i].media.length; j++) {
-          outMedia += "<img src='https://lh3.google.com/u/0/d/" + news[i].media[j] + "' id='news-media' loading='lazy'>";
+          outMedia += "<img src='https://i.ibb.co/" + news[i].media[j] + "' id='news-media' loading='lazy'>";
         }
         outMediaDisplay = "<div id='news-media-holder'>" + outMedia + "</div>";
         outMedia = "";

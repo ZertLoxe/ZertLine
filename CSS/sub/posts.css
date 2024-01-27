@@ -85,22 +85,26 @@ hr{
 #AG-arrow-left ,#AG-arrow-right{
     fill: #fefbee;
     width: 50px;
+    position: absolute;
+    margin-inline: 20px;
+    z-index: 4;
 }
 
 .AG-arrow-left-button ,.AG-arrow-right-button{
-    width: 50px;
+    width: 100px;
+    height: 200px;
     position: absolute;
     z-index: 5;
+    background-color: transparent;
+    border: 0;
 }
 
-.AG-arrow-left-button{
+.AG-arrow-left-button,#AG-arrow-left{
     left: 0;
-    padding: 20px;
 }
 
-.AG-arrow-right-button{
+.AG-arrow-right-button,#AG-arrow-right{
     right: 0;
-    padding: 20px;
 }
 
 #post-element-part-AG #post-element-media-holder{

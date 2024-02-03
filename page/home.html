@@ -18,6 +18,22 @@
 
     <script src="../JS/main.js"></script>
 
+    <script src="../JS/home.js"></script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "http://zertline.com",
+            "name": "ZertLine",
+            "description": "Unlimit Your Imagination"
+        }
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.36/moment-timezone-with-data-10-year-range.min.js"></script>
+
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", (event) => {
             linkLoadAnimation();
@@ -117,6 +133,31 @@
                 </svg>
             </a>
         </div>
+        <div class="home-tabs-holder">
+            <div class="news-tab home-tabs">
+                <h1>Latest News</h1>
+                <div id="news-tab-content" class="news-tab-content">
+                    <div id="tab-content-news-container">
+                        <h3>._.</h3>
+                    </div>
+                </div>
+                <div class="news-tab-news-page-link-holder">
+                    <a class="news-tab-news-page-link" href="news.html">More News</a>
+                </div>
+            </div>
+            <div class="projects-tab home-tabs">
+                <h1>Projects</h1>
+            </div>
+            <div class="posts-tab home-tabs">
+                <h1>Recent Posts</h1>
+                <div id="posts-tab-deck">
+                    <h3>:P</h3>
+                </div>
+                <div class="posts-tab-posts-page-link-holder">
+                    <a class="posts-tab-posts-page-link" href="posts.html">More Posts</a>
+                </div>
+            </div>
+        </div>
         <div class="about-home">
             <div id="about-anchor" class="about-anchor"></div>
             <div class="about-home-content">
@@ -131,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div class="projects-and-news">
+        <div class="projects-and-news-and-posts">
             <div class="pn-content">
                 <div class="pn-news-holder">
                     <a id="pn-anchor-news-link" class="pn-anchor-news-link" href="#pn-anchor-news" tabindex="0">
@@ -191,32 +232,41 @@
                             completed endeavors.</p>
                     </div>
                 </div>
+                <div class="pn-posts-holder">
+                    <a id="pn-anchor-posts-link" class="pn-anchor-posts-link" href="#pn-anchor-posts" tabindex="0">
+                        <svg class="pn-anchor-posts-link-icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 917.16 596.46">
+                            <path
+                                d="M850.02,29.29l37.85,37.85c39.05,39.05,39.05,102.37,0,141.42l-358.61,358.61c-39.05,39.05-102.37,39.05-141.42,0L29.29,208.63c-39.05-39.05-39.05-102.37,0-141.42L67.17,29.32c39.05-39.05,102.37-39.05,141.42,0l214.63,214.63c19.53,19.53,51.18,19.53,70.71,0L708.6,29.29c39.05-39.05,102.37-39.05,141.42,0Z" />
+                        </svg>
+                    </a>
+                    <div id="pn-anchor-posts" class="pn-anchor-posts"></div>
+                    <div class="pn-posts pn-inside">
+                        <h1 class="pn-title">Posts</h1>
+                        <svg class='pn-icon pn-icon-posts pn-icon-posts-mobile' viewBox='0 0 791.06 1000'
+                            overflow='visible'>
+                            <path
+                                d="M666.53,0H124.53C55.75,0,0,55.75,0,124.53V875.47c0,68.78,55.75,124.53,124.53,124.53H666.53c68.78,0,124.53-55.75,124.53-124.53V124.53c0-68.78-55.75-124.53-124.53-124.53ZM219.79,160h351.49c27.61,0,50,22.39,50,50s-22.39,50-50,50H219.79c-27.61,0-50-22.39-50-50s22.39-50,50-50Zm-40.81,195.21h335.11c27.61,0,50,22.39,50,50s-22.39,50-50,50H178.98c-27.61,0-50-22.39-50-50s22.39-50,50-50Zm335.11,490.41H178.98c-27.61,0-50-22.39-50-50s22.39-50,50-50h335.11c27.61,0,50,22.39,50,50s-22.39,50-50,50Zm98-195.21H178.98c-27.61,0-50-22.39-50-50s22.39-50,50-50h433.11c27.61,0,50,22.39,50,50s-22.39,50-50,50Z" />
+                        </svg>
+                        <p class="pn-text pn-text-posts">Embark on a journey into the expansive realm of knowledge
+                            through our Post Page. This meticulously crafted space serves as the gateway to a profound
+                            understanding of our plans and updates. Delve into a comprehensive experience that unfolds
+                            the intricacies of our ongoing projects, offering detailed insights that vividly illustrate
+                            the innovative work we are currently engaged in. The Post Page stands as a portal to a
+                            wealth of information, providing not just a glimpse but a detailed showcase of our
+                            endeavors, ensuring you are well-informed and engaged with the exciting developments within
+                            our domain. Explore the depth of our commitment and creativity, as the Post Page unveils the
+                            essence of what we are making and working on.</p>
+                        <svg class='pn-icon pn-icon-posts pn-icon-posts-desktop' viewBox='0 0 791.06 1000'
+                            overflow='visible'>
+                            <path
+                                d="M666.53,0H124.53C55.75,0,0,55.75,0,124.53V875.47c0,68.78,55.75,124.53,124.53,124.53H666.53c68.78,0,124.53-55.75,124.53-124.53V124.53c0-68.78-55.75-124.53-124.53-124.53ZM219.79,160h351.49c27.61,0,50,22.39,50,50s-22.39,50-50,50H219.79c-27.61,0-50-22.39-50-50s22.39-50,50-50Zm-40.81,195.21h335.11c27.61,0,50,22.39,50,50s-22.39,50-50,50H178.98c-27.61,0-50-22.39-50-50s22.39-50,50-50Zm335.11,490.41H178.98c-27.61,0-50-22.39-50-50s22.39-50,50-50h335.11c27.61,0,50,22.39,50,50s-22.39,50-50,50Zm98-195.21H178.98c-27.61,0-50-22.39-50-50s22.39-50,50-50h433.11c27.61,0,50,22.39,50,50s-22.39,50-50,50Z" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <script>
-        function pnAnchorProjectsGoBackCall() {
-            document.getElementById('pn-anchor-projects').style.transform = 'translateY(0px)';
-        }
-        let pnAnchorProjectsGoBack = false;
-        window.addEventListener('popstate', function () {
-            if (window.location.hash === '#pn-anchor-news') {
-                document.getElementById('pn-anchor-projects').style.transform = 'translateY(calc((100vh - 85px)/-3))';
-                pnAnchorProjectsGoBack = true;
-            }
-            if (window.location.hash === '#pn-anchor-projects') {
-                if (pnAnchorProjectsGoBack) {
-                    setTimeout(pnAnchorProjectsGoBackCall, 300);
-                    pnAnchorProjectsGoBack = false;
-                }
-            }
-        });
-        document.addEventListener("DOMContentLoaded", (event) => {
-            if (window.location.hash === '#pn-anchor-news') {
-                document.getElementById('pn-anchor-projects').style.transform = 'translateY(calc((100vh - 85px)/-3))';
-            }
-        });
-    </script>
 
     <footer>
         <div class="social-media-links">

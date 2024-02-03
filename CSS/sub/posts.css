@@ -20,7 +20,7 @@
     padding-block: 20px;
 }
 
-#posts-header {
+#posts-header{
     padding-block: 25px;
     font-size: 50px;
     font-family: roboto;
@@ -29,6 +29,36 @@
     text-align: center;
     color: #fefbee;
     border-bottom: #fbedb2 solid 5px;
+}
+
+.posts-header-holder{
+    display: flex;
+    align-items: center;
+}
+
+#postsSearch{
+    color: #fefbee;
+    margin-left: auto;
+    margin-right: 50px;
+    background-color: #292e44c1;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: noto;
+    margin-block: 30px;
+    padding: 10px;
+    border: 0;
+    outline: transparent 2px solid;
+    transition: 0.2s;
+}
+
+#postsSearch:hover{
+    transition: 0.2s;
+    outline: #fefbee 2px solid;
+}
+
+#postsSearch:focus{
+    transition: 0.2s;
+    outline: #2148f2 2px solid;
 }
 
 hr{
@@ -134,7 +164,92 @@ hr{
     color: #fefbee;
 }
 
-#post-element-title-holder p{
+#posts-deck {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+}
+
+.posts-card {
+    margin-top: 20px;
+    position: relative;
+    width: 300px;
+    height: 250px;
+    text-decoration: none;
+    margin-inline: inherit;
+    background-color: #fefbeed5;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: #fbedb2 solid 2px;
+    padding-left: 15px;
+}
+
+.posts-card:hover {
+    transform: translateY(-10px);
+    background-color: #292e44;
+    border-color: #2148f2;
+    transition: 0.3s;
+}
+
+.posts-card::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    content: "";
+    background-color: #04124d;
+    width: 10px;
+    height: 180px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.posts-card:hover:before {
+    transition: 0.3s;
+    background-color: #2148f2;
+    height: 220px;
+}
+
+.posts-card h1{
+    text-align: start;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: remond;
+    color: #292e44;
+    transition: 0.3s;
+    text-decoration: #fbedb2 underline;
+    text-underline-offset: 3px;
+}
+
+.posts-card:hover h1{
+    color: #2148f2;
+    transform: translateX(5px);
+    transition: 0.3s;
+    text-decoration-color: #2148f2;
+    text-underline-offset: 7px;
+}
+
+.posts-card p{
+    font-family: remond;
+    font-size: 17px;
+    margin-inline: 15px;
+    text-align: start;
+    color: #010411;
+    transition: 0.3s;
+}
+
+.posts-card:hover p{
+    transform: translateX(1px);
+    transition: 0.3s;
+    color: #fefbee;
+}
+
+#post-element-title-holder p, .post-list-header{
     font-family: roboto;
     font-size: 50px;
     color: #fbedb2;

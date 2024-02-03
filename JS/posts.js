@@ -2,6 +2,58 @@ function getElement(id) {
     return document.getElementById(id)
 }
 
+let postsData = null;
+let postsDataKeys = [];
+
+const sharedLink = "https://www.dropbox.com/scl/fi/mrusdrepjd6esr1wt3sxj/posts.json?rlkey=2wgj9ouddf93zhd2u5kxm0wcs&dl=0";
+
+const directLink = sharedLink.replace("www.dropbox.com", "dl.dropboxusercontent.com");
+
+fetch(directLink)
+    .then(posts => posts.json())
+    .then((posts) => {
+        postsData = posts;
+
+        let outPostList = "";
+        for (let i = Object.keys(posts).length - 1; i >= 0; i--) {
+            postsDataKeys.push(Object.keys(posts)[i]);
+            let postKey = Object.keys(posts)[i];
+            outPostList += "<a class='posts-card' id='post-" + postKey + "' href='posts.html?post=" + postKey + "'><div class='post-card-content'><h1 class='post-card-title'>" + posts[postKey].postTitle + "</h1><p class='post-card-about'>" + posts[postKey].postAbout + "</p></div></a>";
+        }
+        getElement("posts-deck").innerHTML = outPostList;
+    });
+
+let searchInput;
+
+function searchPosts() {
+    for (var key of postsDataKeys) {
+        document.getElementById("post-" + key).style.display = "";
+    };
+    let searchKey, searchTitle, searchCategory, searchAbout;
+    searchInput = document.getElementById("postsSearch").value.toUpperCase();
+    for (var key of postsDataKeys) {
+        searchKey = key.toUpperCase();
+
+        searchTitle = postsData[key].postTitle.toUpperCase();
+
+        searchCategory = postsData[key].postCategory.map(function(i) {
+            return i.toUpperCase();
+        });
+
+        searchAbout = postsData[key].postAbout.toUpperCase();
+
+        if (searchKey.includes(searchInput) === false) {
+            if (searchTitle.includes(searchInput) === false) {
+                if (searchCategory.includes(searchInput) === false) {
+                    if (searchAbout.includes(searchInput) === false) {
+                        document.getElementById("post-" + key).style.display = "none";
+                    };
+                };
+            };
+        };
+    };
+};
+
 let postVarLink = null;
 
 const loadPostCode = async () => {
@@ -112,60 +164,58 @@ const loadPostCode = async () => {
 const afterPostLoad = async () => {
 
     try {
-        console.log("._.")
         await loadPostCode();
-        console.log(">:(")
-            console.log('DOMContentLoaded event fired');
+        console.log('DOMContentLoaded event fired');
 
-            const sliders = document.querySelectorAll('.AG-post-element-media-holder-slider');
+        const sliders = document.querySelectorAll('.AG-post-element-media-holder-slider');
 
-            console.log('Sliders:', sliders);
+        console.log('Sliders:', sliders);
 
-            console.log(sliders.length + ' sliders found. Please work');
+        console.log(sliders.length + ' sliders found. Please work');
 
-            sliders.forEach(function (slider) {
-                console.log('Processing slider');
+        sliders.forEach(function (slider) {
+            console.log('Processing slider');
 
-                const items = slider.querySelectorAll('.media-item');
-                const totalItems = items.length;
-                let currentIndex = 0;
+            const items = slider.querySelectorAll('.media-item');
+            const totalItems = items.length;
+            let currentIndex = 0;
 
-                console.log('Total items in the slider:', totalItems);
+            console.log('Total items in the slider:', totalItems);
 
-                function updateSlider() {
-                    slider.style.transform = `translateX(${-currentIndex * 100}%)`;
-                }
+            function updateSlider() {
+                slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+            }
 
-                function moveToNext() {
-                    currentIndex = (currentIndex + 1) % totalItems;
-                    updateSlider();
-                }
+            function moveToNext() {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateSlider();
+            }
 
-                function moveToPrev() {
-                    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-                    updateSlider();
-                }
+            function moveToPrev() {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                updateSlider();
+            }
 
-                document.addEventListener('click', function (event) {
-                    console.log('Document click event fired');
+            document.addEventListener('click', function (event) {
+                console.log('Document click event fired');
 
-                    if (event.target.classList.contains('AG-arrow-left-button') || event.target.classList.contains('AG-arrow-right-button')) {
-                        const sliderIndex = event.target.dataset.slider;
-                        console.log("bruh")
-                        if (sliderIndex === slider.dataset.slider) {
-                            const direction = event.target.dataset.direction;
+                if (event.target.classList.contains('AG-arrow-left-button') || event.target.classList.contains('AG-arrow-right-button')) {
+                    const sliderIndex = event.target.dataset.slider;
+                    console.log("bruh")
+                    if (sliderIndex === slider.dataset.slider) {
+                        const direction = event.target.dataset.direction;
 
-                            if (direction === 'left') {
-                                console.log("bruh")
-                                moveToPrev();
-                            } else if (direction === 'right') {
-                                console.log("bruh!")
-                                moveToNext();
-                            }
+                        if (direction === 'left') {
+                            console.log("bruh")
+                            moveToPrev();
+                        } else if (direction === 'right') {
+                            console.log("bruh!")
+                            moveToNext();
                         }
                     }
-                });
+                }
             });
+        });
     } catch (error) {
         console.error('Error:', error);
     }

@@ -77,16 +77,14 @@ body {
 }
 
 header {
-    background-color: #010411;
     font-family: remond;
     width: 100%;
-    height: 85px;
     align-items: center;
     position: sticky;
     top: 0;
-    box-shadow: 0px 0px 10px #010411;
     z-index: 5;
     transition: 0.2s;
+    height: 86px;
 }
 
 .scroll-indicator-bar {
@@ -107,16 +105,17 @@ header {
 }
 
 .main-logo {
-    background-color: hsla(229, 89%, 4%, 0.75);
     float: left;
     margin-left: 5%;
     overflow: hidden;
     align-items: center;
-    height: 85px;
+    height: 70px;
     padding-inline: 15px;
     align-self: center;
     transition: 0.5s;
     min-width: 250px;
+    margin-block: 7.5px;
+    border-radius: 10px;
 }
 
 .logo {
@@ -149,9 +148,11 @@ header {
 }
 
 .nav-link {
-    background-color: hsla(229, 89%, 4%, 1);
     transition: background-color 0.2s;
-    padding-block: 30.5px;
+    padding-block: 15px;
+    margin-block: 15.5px;
+    margin-inline: 5px;
+    border-radius: 5px;
     transition: 0.3s;
 }
 
@@ -177,9 +178,12 @@ header {
 }
 
 .nav-link-active {
-    background-color: hsla(228, 90%, 16%, 1);
+    background-color: hsla(228, 90%, 16%, 0.75);
     transition: background-color 0.2s;
-    padding-block: 30.5px;
+    padding-block: 15px;
+    margin-block: 15.5px;
+    margin-inline: 5px;  
+    border-radius: 5px;
     transition: 0.3s;
 }
 
@@ -309,31 +313,38 @@ header {
 footer {
     background-color: #010411;
     width: 100%;
-    height: 70px;
+    height: auto;
 }
 
-.footer-text,
-.social-media-links {
+.social-media-and-logo{
     display: flex;
 }
 
-.footer-text {
-    float: right;
-    font-family: noto;
-    margin-right: 15px;
-    font-size: 15px;
-    margin-top: 25px;
-    cursor: default;
+.social-media-links{
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-.social-media-links {
-    float: left;
-    margin-left: 20px;
+.social-media-link{
+    height: 30px;
+    margin-bottom: auto;
+}
+
+.footer-text {
+    padding-block: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: noto;
+    margin: auto;
+    cursor: default;
+    font-size: 12px;
+    color: #fefbee94;
 }
 
 .social-media-icon {
     height: 30px;
-    margin-top: 20px;
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -361,6 +372,103 @@ footer {
     fill: #ffffff;
 }
 
+.social-media-comment{
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+    margin-inline: auto;
+    font-family: noto;
+    font-size: small;
+    width: 150px;
+    opacity: 0;
+}
+
+.social-media-link:hover + .discord-comment {
+    transition: 0.3;
+    visibility: visible;
+    opacity: 1;
+}
+
+.social-media-link:hover + .youtube-comment {
+    transition: 0.3s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.social-media-link:hover + .reddit-comment {
+    transition: 0.3s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.social-media-link:hover + .x-comment {
+    transition: 0.3s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.zertline-text-logo path{
+    fill: #fefbee;
+}
+
+.zertline-text-logo{
+    width: 150px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.mail-and-pages{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: noto;
+    font-size: 15px;
+}
+
+.footer-contact-us{
+    margin-block: 20px;   
+    margin-inline: auto;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.footer-contact-us:hover{
+    opacity: 1;
+}
+
+.footer-contact-us-text{
+    font-family: remond;
+    margin-right: 5px;
+}
+
+.footer-contact-us-icon{
+    fill: #fefbee;
+    height: 15px;
+}
+
+.footer-extra-pages{
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-extra-page{
+    padding: 20px;
+    text-decoration: none;
+    margin-inline: 5%;
+    opacity: 0.8;
+}
+
+.footer-extra-page:hover{
+    opacity: 1;
+}
+
 @media only screen and (max-width: 740px) {
     header {
         background-color: #010411;
@@ -370,6 +478,7 @@ footer {
         background-color: hsla(229, 89%, 4%, 0.75);
         margin-left: 5%;
         height: 70px;
+        margin-block: 0;
         padding-top: 15px;
         padding-inline: 5px;
         transition: 0.5s;

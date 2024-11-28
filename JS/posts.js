@@ -222,14 +222,32 @@ const loadPostCode = async () => {
                       "</div></div><hr>";
                     AGDataSlider += 1;
                   } else {
+                    let finalOutMedia =
+                      "<div id='post-element-media-holder'>" +
+                      outMedia +
+                      "</div>";
+                    let finalOutText =
+                      "<div id='post-element-text-holder'>" +
+                      outText +
+                      "</div>";
+                    if (
+                      post[postVarLink].postElements[i]
+                        .postElementStructure[1] === "0"
+                    ) {
+                      finalOutMedia = "";
+                    }
+                    if (
+                      post[postVarLink].postElements[i]
+                        .postElementStructure[2] === "0"
+                    ) {
+                      finalOutText = "";
+                    }
                     outPostElements +=
                       "<div id='post-element-part'>" +
                       outTitle +
-                      "<div id='post-element-media-holder'>" +
-                      outMedia +
-                      "</div><div id='post-element-text-holder'>" +
-                      outText +
-                      "</div></div><hr>";
+                      finalOutMedia +
+                      finalOutText +
+                      "</div><hr>";
                   }
                 }
               }

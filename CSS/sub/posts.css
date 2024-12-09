@@ -253,10 +253,22 @@ hr{
     color: #fefbee;
 }
 
-#post-element-title-holder p, .post-list-header{
+#post-element-title-holder .post-element-title-big, .post-list-header{
     font-family: roboto;
     font-size: 50px;
     color: #fbedb2;
+}
+
+#post-element-title-holder .post-element-title-medium{
+    font-family: roboto;
+    font-size: 30px;
+    color: #66ccff;
+}
+
+#post-element-title-holder .post-element-title-small{
+    font-family: roboto;
+    font-size: 20px;
+    color: #eceffe;
 }
 
 #post-element-image{

@@ -108,6 +108,7 @@ const loadPostCode = async () => {
                   let outTitle = "";
                   let outMedia = "";
                   let outText = "";
+                  let horizontalRule = "";
                   let videoControls = "";
                   let AGDataSlider = 1;
 
@@ -116,8 +117,8 @@ const loadPostCode = async () => {
                       .postElementStructure[0] === "true"
                   ) {
                     outTitle =
-                      "<div id='post-element-title-holder'><p>" +
-                      post[postVarLink].postElements[i].title +
+                      "<div id='post-element-title-holder'><p class='post-element-title-" + post[postVarLink].postElements[i].title[0] + "'>" +
+                      post[postVarLink].postElements[i].title[1] +
                       "</p></div>";
                   }
 
@@ -183,6 +184,10 @@ const loadPostCode = async () => {
                       "<p>" + post[postVarLink].postElements[i].text + "</p>";
                   }
 
+                  if (post[postVarLink].postElements[i].divider === "true") {
+                    horizontalRule = "<hr>"
+                  }
+
                   if (post[postVarLink].postElements[i].elementShape === "RM") {
                     outPostElements +=
                       "<div id='post-element-part-RM'><div id='post-element-title-text-holder'>" +
@@ -191,7 +196,7 @@ const loadPostCode = async () => {
                       outText +
                       "</div></div><div id='post-element-media-holder'>" +
                       outMedia +
-                      "</div></div><hr>";
+                      "</div></div>" + horizontalRule;
                   } else if (
                     post[postVarLink].postElements[i].elementShape === "LM"
                   ) {
@@ -202,7 +207,7 @@ const loadPostCode = async () => {
                       outTitle +
                       "<div id='post-element-text-holder'>" +
                       outText +
-                      "</div></div></div><hr>";
+                      "</div></div></div>" + horizontalRule;
                   } else if (
                     post[postVarLink].postElements[i].elementShape === "AG"
                   ) {
@@ -219,7 +224,7 @@ const loadPostCode = async () => {
                       AGDataSlider +
                       " data-direction='right'></button><svg id='AG-arrow-right' class='AG-arrow-right' viewBox='0 0 650.34 1000'><path d='M31.93,73.21L73.21,31.93c42.58-42.58,111.62-42.58,154.2,0l391,391c42.58,42.58,42.58,111.62,0,154.2L227.47,968.07c-42.58,42.58-111.62,42.58-154.2,0l-41.31-41.31c-42.58-42.58-42.58-111.62,0-154.2l234.01-234.01c21.29-21.29,21.29-55.81,0-77.1L31.93,227.4c-42.58-42.58-42.58-111.62,0-154.2Z'/></svg></div><div id='post-element-text-holder'>" +
                       outText +
-                      "</div></div><hr>";
+                      "</div></div>" + horizontalRule;
                     AGDataSlider += 1;
                   } else {
                     let finalOutMedia =
@@ -247,7 +252,7 @@ const loadPostCode = async () => {
                       outTitle +
                       finalOutMedia +
                       finalOutText +
-                      "</div><hr>";
+                      "</div>" + horizontalRule;
                   }
                 }
               }
